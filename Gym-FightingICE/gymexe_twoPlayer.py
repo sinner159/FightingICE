@@ -10,7 +10,7 @@ from gym_fightingice.testAI import TestAI
 
 def p_thread1(env,p1,p2):
     while True:
-        obs = env.reset(p1=p1)
+        obs = env.reset(p1=p1,p2=p2)
 
         done = False
         while not done:
@@ -18,15 +18,16 @@ def p_thread1(env,p1,p2):
 
 def p_thread2(env,p1,p2):
     while True:
-        obs = env.reset(p2=p2)
+        obs = env.reset(p1=p1,p2=p2)
 
         done = False
         while not done:
             new_obs, reward, done, _ = env.step(38)
 
-env1 = gym.make("FightingiceDataTwoPlayer-v0", java_env_path=os.getcwd(),port=4242, freq_restart_java=3)
+cwd = f"{os.getcwd()}\\Gym-FightingICE\\"
+env1 = gym.make("FightingiceDataTwoPlayer-v0", java_env_path=cwd,port=4242, freq_restart_java=3)
 p2_server = env1.build_pipe_and_return_p2()
-env2 = gym.make("FightingiceDataTwoPlayer-v0", java_env_path=os.getcwd(),port=4242,p2_server=p2_server)
+env2 = gym.make("FightingiceDataTwoPlayer-v0", java_env_path=cwd,port=4242,p2_server=p2_server)
 t1 = Thread(target=p_thread1, name="play_thread1", args=(env1,TestAI,Machete, ))
 t2 = Thread(target=p_thread2, name="play_thread2", args=(env2,TestAI,Machete, ))
 t1.start()
