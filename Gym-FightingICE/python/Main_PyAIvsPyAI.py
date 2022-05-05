@@ -1,7 +1,7 @@
 import sys
 from time import sleep
 from python.KickAI import KickAI
-from python.TestAI import TestAI
+from final_project_code.TestAI import TestAI
 from python.DisplayInfo import DisplayInfo
 from py4j.java_gateway import JavaGateway, GatewayParameters, CallbackServerParameters, get_field
 
