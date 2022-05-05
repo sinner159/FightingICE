@@ -11,8 +11,8 @@
             "program": "${file}",//${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "python": "${workspaceFolder}/venv/Scripts/python.exe",
-            "localRoot": "${workspaceFolder}/",
-            "remoteRoot": "${workspaceFolder}/",
+            "localRoot": "${workspaceFolder}/Gym-FightingICE",
+            "remoteRoot": "${workspaceFolder}/Gym-FightingICE",
             "justMyCode": false,
             ""
         }
