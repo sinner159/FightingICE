@@ -1,6 +1,7 @@
 import sys
 from time import sleep
 from python.KickAI import KickAI
+from python.TestAI import TestAI
 from python.DisplayInfo import DisplayInfo
 from py4j.java_gateway import JavaGateway, GatewayParameters, CallbackServerParameters, get_field
 
@@ -12,7 +13,7 @@ def check_args(args):
 
 def start_game():
         p1 = KickAI(gateway)
-        p2 = DisplayInfo(gateway)
+        p2 = TestAI(gateway)
         manager.registerAI(p1.__class__.__name__, p1)
         manager.registerAI(p2.__class__.__name__, p2)
         print("Start game")

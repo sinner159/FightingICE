@@ -8,7 +8,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${file}",//${workspaceFolder}/main.py",
+            "program": "${workspaceFolder}/Gym-FightingICE/python/Main_PyAIvsPyAI.py",//${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "python": "${workspaceFolder}/venv/Scripts/python.exe",
             "localRoot": "${workspaceFolder}/Gym-FightingICE/",
