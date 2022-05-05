@@ -11,10 +11,10 @@
             "program": "${file}",//${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "python": "${workspaceFolder}/venv/Scripts/python.exe",
-            "localRoot": "${workspaceFolder}/Gym-FightingICE",
-            "remoteRoot": "${workspaceFolder}/Gym-FightingICE",
-            "justMyCode": false,
-            ""
+            "localRoot": "${workspaceFolder}/Gym-FightingICE/",
+            "remoteRoot": "${workspaceFolder}/Gym-FightingICE/",
+            "cwd": "${workspaceFolder}/Gym-FightingICE/",
+            "justMyCode": false
         }
     ]
 }
