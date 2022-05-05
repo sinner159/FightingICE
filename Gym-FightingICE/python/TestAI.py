@@ -1,3 +1,4 @@
+from collections import deque
 from py4j.java_gateway import get_field
 
 class TestAI(object):
@@ -11,13 +12,15 @@ class TestAI(object):
         # Getting the frame data of the current frame
         self.frameData = frameData
         self.cc.setFrameData(self.frameData, self.player)
+
+
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
     	print(x)
     	
     # please define this method when you use FightingICE version 4.00 or later
     def getScreenData(self, sd):
-    	pass
+    	a=0
         
     def initialize(self, gameData, player):
         # Initializng the command center, the simulator and some other things
@@ -36,26 +39,38 @@ class TestAI(object):
         return self.inputKey
         
     def processing(self):
-        # Just compute the input for the current frame
+        #compute the input for the current frame
+        #================================
         if self.frameData.getEmptyFlag() or self.frameData.getRemainingFramesNumber() <= 0:
                 self.isGameJustStarted = True
                 return
                 
+        #SkillFlag tells us whether or not we're still executing a skill. 
+        # True when queue of inputs waiting to be executed for the skill
         if self.cc.getSkillFlag():
                 self.inputKey = self.cc.getSkillKey()
                 return
-            
-        self.inputKey.empty()
-        self.cc.skillCancel()     
+        
 
+        p1 = self.frameData.getCharacter(False)
+        p2 = self.frameData.getCharacter(True)
+        distanceY = self.frameData.getDistanceX()
+        distanceY = self.frameData.getDistanceY()
+        framesSinceStart = self.frameData.getFramesNumber()
+        dequeAtkData = self.frameData.getProjectiles()
+        dequeAtkDataP1 = self.frameData.getProjectilesByP1()
+        dequeAtkDataP2 = self.frameData.getProjectilesByP2()
+        timeSec = self.frameData.getRemainingTime()
+        timeMill = self.frameData.getRemainingTimeMilliseconds()
+        roundNum = self.frameData.getRound()
+
+        self.inputKey.empty()
+        #============================
+        #Start processing
         # Just spam kick
         
-        if self.a:
-            self.cc.commandCall("4")
-            self.a = False
-        else:
-            self.cc.commandCall("6")
-            self.a = True
+        self.cc.commandCall("6")
+      
                         
     # This part is mandatory
     class Java:
