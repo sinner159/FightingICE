@@ -8,7 +8,19 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/Gym-FightingICE/python/Main_PyAIvsPyAI.py",//${workspaceFolder}/main.py",
+            "program": "${file}",//${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "python": "${workspaceFolder}/venv/Scripts/python.exe",
+            "localRoot": "${workspaceFolder}/Gym-FightingICE/",
+            "remoteRoot": "${workspaceFolder}/Gym-FightingICE/",
+            "cwd": "${workspaceFolder}/Gym-FightingICE/",
+            "justMyCode": false
+        }
+        {
+            "name": "Python: TestAI",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Gym-FightingICE/python/main.py",//${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "python": "${workspaceFolder}/venv/Scripts/python.exe",
             "localRoot": "${workspaceFolder}/Gym-FightingICE/",

@@ -1,7 +1,7 @@
 from typing import List, Optional, Tuple, Dict
 import re
 from functools import lru_cache
-from action import ALL_ACTIONS
+from final_project_code.action import ALL_ACTIONS
 
 class FightingFeaturesExtractor:
     """
