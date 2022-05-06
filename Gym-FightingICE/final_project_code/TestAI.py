@@ -8,7 +8,6 @@ class TestAI(object):
     def __init__(self, gateway):
         self.gateway = gateway
         
-        
     def close(self):
         pass
         
@@ -18,14 +17,13 @@ class TestAI(object):
 
         self.cc.setFrameData(self.frameData, self.player)
 
-
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
     	print(x)
     	
     # please define this method when you use FightingICE version 4.00 or later
     def getScreenData(self, sd):
-    	a=0
+    	pass
         
     def initialize(self, gameData, player):
         # Initializng the command center, the simulator and some other things
@@ -62,9 +60,6 @@ class TestAI(object):
         action = self.mcts_root.best_action()
 
         self.inputKey.empty()
-        #============================
-        #Start processing
-        # Just spam kick
         
         self.cc.commandCall(action)
       
