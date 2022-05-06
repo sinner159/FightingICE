@@ -46,3 +46,12 @@ class CharacterDataWrapper():
         # self.Top = cd.setTop(int top)
         # self.X = cd.setX(int x)
         # self.Y = cd.setY(int y)
+
+    def onGround(self):
+        return self.centerY == 537
+
+    def inAir(self):
+        return self.centerY > 537
+    
+    def isCrouching(self):
+        return self.centerY < 537

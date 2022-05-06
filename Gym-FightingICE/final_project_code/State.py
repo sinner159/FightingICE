@@ -1,5 +1,5 @@
 from final_project_code.wrappers.CharacterDataWrapper import CharacterDataWrapper
-from .action import ALL_USEFUL_ACTIONS
+import final_project_code.action as action
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 from py4j.java_gateway import get_method
 from python.feature_extractor.features_extractor import FightingFeaturesExtractor
@@ -29,12 +29,16 @@ class State():
         self.timeRemaining = self.frameData.getRemainingTimeMilliseconds()
 
 
-
-
     def getLegalActions(self):
-
+        if self.p2.onGround():
+            return action.GROUND_ACTIONS
         
-        return ALL_USEFUL_ACTIONS
+        if self.p2.inAir():
+            return action.AIR_ACTIONS
+        
+        #if self.p2.isCrouching():
+
+        return action.ALL_USEFUL_ACTIONS
         
     def isGameOver(self):
         if self.frameData.getEmptyFlag():
