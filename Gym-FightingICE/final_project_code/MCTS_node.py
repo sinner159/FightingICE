@@ -4,6 +4,7 @@ from final_project_code.State import State
 
 
 class MonteCarloTreeSearchNode():
+    
     def __init__(self, state, parent=None, parent_action=None):
         self.state: State = state
         self.parent = parent
@@ -17,11 +18,11 @@ class MonteCarloTreeSearchNode():
         return
     
     def best_action(self):
-        simulation_no = 100
+        simulation_no = 1
         for i in range(simulation_no):
             current_node: MonteCarloTreeSearchNode = self._treePolicy()
             reward = current_node.rollout()
-            current_node.backpropagate(reward)
+            current_node.backpropogate(reward)
         return self.bestChild(c_param=0.0).parent_action
 
     def _treePolicy(self):
@@ -38,13 +39,21 @@ class MonteCarloTreeSearchNode():
         
         return current_node
     
+    def expand(self):
+        
+        action = self._untried_actions.pop()
+        next_state = self.state.move(action)
+        child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action)
+        self.children.append(child_node)
+        return child_node
+
     def rollout(self):
         
         current_rollout_state = self.state
         
         while not current_rollout_state.isGameOver():
             possible_moves = current_rollout_state.getLegalActions()
-            action = self.rolloutPolicy(possible_moves)
+            action = self.rollout_policy(possible_moves)
             current_rollout_state = current_rollout_state.move(action)
         
         return current_rollout_state.gameResult()
@@ -70,15 +79,12 @@ class MonteCarloTreeSearchNode():
         losses = self._results[-1]
         return wins - losses
     
+    def wins(self):
+        wins = self._results[1]
+        return wins
+
     def numberOfVisits(self):
         return self._number_of_visits
-    
-    def expand(self):
-        
-        action = self._untried_actions.pop()
-        next_state = self.state.move(action)
-        child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action)
-        return child_node
     
     def isTerminalNode(self):
         return self.state.isGameOver()
@@ -87,7 +93,7 @@ class MonteCarloTreeSearchNode():
         return len(self._untried_actions) == 0.0
     
     def bestChild(self, c_param = 0.1):
-        choices_weights =  [(c.q() / c.n()) + c_param * np.sqrt((2 * np.log(self.n()) / c.n())) for c in self.children]
+        choices_weights =  [(c.wins() / c.numberOfVisits()) + c_param * np.sqrt((2 * np.log(self.numberOfVisits()) / c.numberOfVisits())) for c in self.children]
         return self.children[np.argmax(choices_weights)]
 
         

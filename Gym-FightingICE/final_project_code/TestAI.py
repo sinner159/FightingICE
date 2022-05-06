@@ -1,6 +1,6 @@
 from collections import deque
 from final_project_code.MCTS_node import MonteCarloTreeSearchNode
-from final_project_code.wrappers.SimulatorWrapper import SimulatorAdapter
+from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 from py4j.java_gateway import get_field
 from .State import State
 
@@ -35,9 +35,8 @@ class TestAI(object):
         
         self.player = player
         self.gameData = gameData
-
-        State.simulator = SimulatorAdapter(self.gateway, self.gameData.getSimulator())
-        self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData))
+        self.mcts_root = None
+        State.simulatorAdapter = SimulatorWrapper(self.gateway, self.gameData.getSimulator())
         return 0
         
     def input(self):
@@ -50,7 +49,10 @@ class TestAI(object):
         if self.frameData.getEmptyFlag() or self.frameData.getRemainingFramesNumber() <= 0:
                 self.isGameJustStarted = True
                 return
-                
+
+        if self.mcts_root == None:
+            self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData))
+
         #SkillFlag tells us whether or not we're still executing a skill. 
         # True when queue of inputs waiting to be executed for the skill
         if self.cc.getSkillFlag():
@@ -73,14 +75,4 @@ class TestAI(object):
         
 
 
-      # p1 = self.frameData.getCharacter(False)
-        # p2 = self.frameData.getCharacter(True)
-        # distanceY = self.frameData.getDistanceX()
-        # distanceY = self.frameData.getDistanceY()
-        # framesSinceStart = self.frameData.getFramesNumber()
-        # dequeAtkData = self.frameData.getProjectiles()
-        # dequeAtkDataP1 = self.frameData.getProjectilesByP1()
-        # dequeAtkDataP2 = self.frameData.getProjectilesByP2()
-        # timeSec = self.frameData.getRemainingTime()
-        # timeMill = self.frameData.getRemainingTimeMilliseconds()
-        # roundNum = self.frameData.getRound()
+    
