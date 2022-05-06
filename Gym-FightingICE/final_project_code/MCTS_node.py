@@ -1,3 +1,5 @@
+from collections import defaultdict
+import numpy as np
 import time
 
 
@@ -61,7 +63,7 @@ class MonteCarloTreeSearchNode():
     def rollout_policy(self, possible_moves):
         return possible_moves[np.random.randint(len(possible_moves))]
     
-    def _tree_policy(self):
+    def _treePolicy(self):
         current_node = self
         while not current_node.isTerminalNode():
             if not current_node.isFullyExpanded():
@@ -76,22 +78,12 @@ class MonteCarloTreeSearchNode():
             v = self._treePolicy()
             reward = v.rollout()
             v.backpropagate(reward)
-        return self.bestChild(c_param=0.0)
+        return self.bestChild(c_param=0.0).parent_action
     
     def get_legal_actions(self): 
-        '''
-        Modify according to your game or
-        needs. Constructs a list of all
-        possible actions from current state.
-        Returns a list.
-        '''
-    def is_game_over(self):
-        '''
-        Modify according to your game or 
-        needs. It is the game over condition
-        and depends on your game. Returns
-        true or false
-        '''
+        return self.state.getLegalActions()
+        
+        
     def game_result(self):
         '''
         Modify according to your game or 

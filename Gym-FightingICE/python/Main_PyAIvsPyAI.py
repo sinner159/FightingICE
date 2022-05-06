@@ -14,6 +14,7 @@ def check_args(args):
 def start_game():
         p1 = KickAI(gateway)
         p2 = TestAI(gateway)
+        
         manager.registerAI(p1.__class__.__name__, p1)
         manager.registerAI(p2.__class__.__name__, p2)
         print("Start game")

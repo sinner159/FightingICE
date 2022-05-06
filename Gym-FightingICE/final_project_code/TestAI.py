@@ -1,9 +1,12 @@
 from collections import deque
+from final_project_code.MCTS_node import MonteCarloTreeSearchNode
 from py4j.java_gateway import get_field
+from .State import State
 
 class TestAI(object):
     def __init__(self, gateway):
         self.gateway = gateway
+        
         
     def close(self):
         pass
@@ -11,6 +14,7 @@ class TestAI(object):
     def getInformation(self, frameData, isControl):
         # Getting the frame data of the current frame
         self.frameData = frameData
+
         self.cc.setFrameData(self.frameData, self.player)
 
 
@@ -27,11 +31,12 @@ class TestAI(object):
         self.inputKey = self.gateway.jvm.struct.Key()
         self.frameData = self.gateway.jvm.struct.FrameData()
         self.cc = self.gateway.jvm.aiinterface.CommandCenter()
-
+        
         self.player = player
         self.gameData = gameData
-        self.simulator = self.gameData.getSimulator()
         self.a = True       
+        State.simulator = self.gameData.getSimulator()
+        self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData))
         return 0
         
     def input(self):
@@ -52,6 +57,9 @@ class TestAI(object):
                 return
         
 
+        action = self.mcts_root.best_action()
+
+
         p1 = self.frameData.getCharacter(False)
         p2 = self.frameData.getCharacter(True)
         distanceY = self.frameData.getDistanceX()
@@ -69,7 +77,7 @@ class TestAI(object):
         #Start processing
         # Just spam kick
         
-        self.cc.commandCall("6")
+        self.cc.commandCall(action)
       
                         
     # This part is mandatory
