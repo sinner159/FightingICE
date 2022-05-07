@@ -1,11 +1,15 @@
 import sys
 from time import sleep
+from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
+from final_project_code.utils.Logger import Logger
 from gym_fightingice.envs.Machete import Machete
 from python.KickAI import KickAI
 from final_project_code.TestAI import TestAI
 from python.DisplayInfo import DisplayInfo
 from py4j.java_gateway import JavaGateway, GatewayParameters, CallbackServerParameters, get_field
 import subprocess 
+import os
+
 def check_args(args):
 	for i in range(argc):
 		if args[i] == "-n" or args[i] == "--n" or args[i] == "--number":
@@ -13,7 +17,7 @@ def check_args(args):
 			GAME_NUM = int(args[i+1])
 
 def start_game():
-        p1 = TestAI(gateway)
+        p1 = TestAI(gateway, PerformanceMetrics(), Logger(f"{os.getcwd()}/logger/"))
         p2 = Machete(gateway)
         
         manager.registerAI(p1.__class__.__name__, p1)

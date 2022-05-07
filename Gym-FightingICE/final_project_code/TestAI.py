@@ -1,5 +1,7 @@
 from collections import deque
 from final_project_code.MCTS_node import MonteCarloTreeSearchNode
+from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
+from final_project_code.utils.Logger import Logger
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 from py4j.java_gateway import get_field
 from .State import State
@@ -8,8 +10,10 @@ class TestAI(object):
 
     motionDataDict = {}
 
-    def __init__(self, gateway):
+    def __init__(self, gateway, performanceMetrics: PerformanceMetrics, logger: Logger):
         self.gateway = gateway
+        self.performanceMetrics = performanceMetrics
+        self.logger = logger
         
     def close(self):
         pass
@@ -22,7 +26,8 @@ class TestAI(object):
 
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
-    	print(x)
+    	self.logger.write(str(self.performanceMetrics))
+        
     	
     # please define this method when you use FightingICE version 4.00 or later
     def getScreenData(self, sd):
