@@ -1,0 +1,13 @@
+MCTS
+-no optimization
+-optimized untried action data structure
+-optimized untried action data structure and action priority filter
+-MCTS with SmartSearch
+-MCTS with Genetic Algorithm
+
+Pure Genetic Algorithm?
+
+Comparisons:
+-Winrate (games won vs games lost)
+-Average Score (player hp vs opponent hp)
+-Average Time to Victory
