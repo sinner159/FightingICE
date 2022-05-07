@@ -7,14 +7,16 @@ from python.feature_extractor.features_extractor import FightingFeaturesExtracto
 class State():
 
     simulatorAdapter: SimulatorWrapper = None
+    
+    legalActions = [action.ALL_USEFUL_ACTIONS].append([action.ALL_USEFUL_ACTIONS])
+    actionBoundary = len(action.ALL_USEFUL_ACTIONS)
 
     def __init__(self, frameData = None):
+        
         self.frameData = frameData
 
-        me = self.frameData.getCharacter(False)
-        opp = self.frameData.getCharacter(True)
-        self.me = CharacterDataWrapper(me)
-        self.opp = CharacterDataWrapper(opp)
+        self.me = CharacterDataWrapper(self.frameData.getCharacter(False))
+        self.opp = CharacterDataWrapper(self.frameData.getCharacter(True))
 
         self.remainingFrames = self.frameData.getRemainingFramesNumber()
         self.distanceY = self.frameData.getDistanceX()
@@ -31,11 +33,11 @@ class State():
 
     def getLegalActions(self):
         
-        if self.me.onGround():
-            return action.GROUND_ACTIONS
+        # if self.me.onGround():
+        #     return action.GROUND_ACTIONS
         
-        if self.me.inAir():
-            return action.AIR_ACTIONS
+        # if self.me.inAir():
+        #     return action.AIR_ACTIONS
         
         #if self.opp.isCrouching():
 
@@ -54,5 +56,8 @@ class State():
         return State(frameData)
 
 
-    def gameResult(self):
-        return 1 if self.me.hp > self.opp.hp else 0
+    def gameResult(self, starting_state: "State"):
+        deltaMyHp = (self.me.hp - starting_state.me.hp)
+        deltaOppHp = (self.opp.hp - starting_state.opp.hp)
+        return 1 if deltaMyHp > deltaOppHp else 0
+        #return 1 if self.me.hp > self.opp.hp else 0

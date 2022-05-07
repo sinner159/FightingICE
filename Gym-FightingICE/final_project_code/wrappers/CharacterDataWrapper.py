@@ -37,3 +37,10 @@ class CharacterDataWrapper():
     
     def isCrouching(self):
         return self.centerY < 537
+
+
+    def __str__(self):
+        return f"Action: {self.action} HP: {self.hp} #hitCount {self.hitCount}"
+    
+    def __repr__(self):
+        return str(self)
