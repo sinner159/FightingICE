@@ -24,6 +24,7 @@ import subprocess
 import sys
 from threading import Thread, RLock
 import weakref
+import traceback
 
 from py4j.compat import (
     range, hasattr2, basestring, CompatThread, Queue, WeakSet)
@@ -2230,9 +2231,13 @@ class CallbackConnection(Thread):
                 return_value = getattr(self.pool[obj_id], method)(*params)
                 return_message = proto.RETURN_MESSAGE + proto.SUCCESS +\
                     get_command_part(return_value, self.pool)
-            except Exception:
+            except Exception as ex:
+                tb = traceback.format_exc()
+                print(ex)
+                print(tb)
                 logger.exception("There was an exception while executing the "
                                  "Python Proxy on the Python Side.")
+                                 
         return return_message
 
     def _get_params(self, input):

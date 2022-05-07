@@ -12,8 +12,8 @@ def check_args(args):
 			GAME_NUM = int(args[i+1])
 
 def start_game():
-        p1 = KickAI(gateway)
-        p2 = TestAI(gateway)
+        p1 = TestAI(gateway)
+        p2 = KickAI(gateway)
         
         manager.registerAI(p1.__class__.__name__, p1)
         manager.registerAI(p2.__class__.__name__, p2)

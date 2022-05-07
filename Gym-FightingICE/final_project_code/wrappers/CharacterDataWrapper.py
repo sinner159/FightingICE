@@ -27,25 +27,7 @@ class CharacterDataWrapper():
         self.front = cd.isFront()
         self.hitConfirm = cd.isHitConfirm()
         self.playerNumber = cd.isPlayerNumber()
-        # self.Action = cd.setAction(Action action)
-        # self.Attack = cd.setAttack(AttackData attack)
-        # self.Bottom = cd.setBottom(int bottom)
-        # self.Control = cd.setControl(boolean control)
-        # self.Energy = cd.setEnergy(int energy)
-        # self.Front = cd.setFront(boolean front)
-        # self.HitConfirm = cd.setHitConfirm(boolean hitConfirm)
-        # self.HitCount = cd.setHitCount(int hitCount)
-        # self.Hp = cd.setHp(int hp)
-        # self.LastHitFrame = cd.setLastHitFrame(int lastHitFrame)
-        # self.Left = cd.setLeft(int left)
-        # self.RemainingFrame = cd.setRemainingFrame(int remainingFrame)
-        # self.Right = cd.setRight(int right)
-        # self.SpeedX = cd.setSpeedX(int speedX)
-        # self.SpeedY = cd.setSpeedY(int speedY)
-        # self.State = cd.setState(State state)
-        # self.Top = cd.setTop(int top)
-        # self.X = cd.setX(int x)
-        # self.Y = cd.setY(int y)
+
 
     def onGround(self):
         return self.centerY == 537

@@ -11,18 +11,18 @@ class State():
     def __init__(self, frameData = None):
         self.frameData = frameData
 
-        p1 = self.frameData.getCharacter(False)
-        p2 = self.frameData.getCharacter(True)
-        self.p1 = CharacterDataWrapper(p1)
-        self.p2 = CharacterDataWrapper(p2)
+        me = self.frameData.getCharacter(False)
+        opp = self.frameData.getCharacter(True)
+        self.me = CharacterDataWrapper(me)
+        self.opp = CharacterDataWrapper(opp)
 
-        self.rem = self.frameData.getRemainingFramesNumber()
+        self.remainingFrames = self.frameData.getRemainingFramesNumber()
         self.distanceY = self.frameData.getDistanceX()
         self.distanceY = self.frameData.getDistanceY()
         self.framesSinceStart = self.frameData.getFramesNumber()
         self.dequeAtkData = self.frameData.getProjectiles()
-        self.dequeAtkDataP1 = self.frameData.getProjectilesByP1()
-        self.dequeAtkDataP2 = self.frameData.getProjectilesByP2()
+        self.dequeAtkDatame = self.frameData.getProjectilesByP1()
+        self.dequeAtkDataopp = self.frameData.getProjectilesByP2()
         self.timeSec = self.frameData.getRemainingTime()
         self.timeMill = self.frameData.getRemainingTimeMilliseconds()
         self.roundNum = self.frameData.getRound()
@@ -30,13 +30,14 @@ class State():
 
 
     def getLegalActions(self):
-        if self.p2.onGround():
+        
+        if self.me.onGround():
             return action.GROUND_ACTIONS
         
-        if self.p2.inAir():
+        if self.me.inAir():
             return action.AIR_ACTIONS
         
-        #if self.p2.isCrouching():
+        #if self.opp.isCrouching():
 
         return action.ALL_USEFUL_ACTIONS
         
@@ -44,15 +45,14 @@ class State():
         if self.frameData.getEmptyFlag():
             return False
 
-        return self.p1.hp <= 0 or self.p2.hp <= 0 or self.timeRemaining <= 0 
+        return self.me.hp <= 0 or self.opp.hp <= 0 or self.timeRemaining <= 0 
 
 
-    def move(self, action):
-        frameData = self.simulatorAdapter.simulateMove(self.frameData,[action],[])
+    def simulate(self, myActions,oppActions):
+
+        frameData = self.simulatorAdapter.simulateMoves(self.frameData,myActions,oppActions)
         return State(frameData)
 
-    def gameResult(self):
-        p1Hp = self.frameData.getCharacter(False).getHp()
-        p2Hp = self.frameData.getCharacter(True).getHp()
 
-        return 1 if p1Hp > p2Hp else 0
+    def gameResult(self):
+        return 1 if self.me.hp > self.opp.hp else 0

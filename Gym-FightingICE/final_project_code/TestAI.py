@@ -5,6 +5,9 @@ from py4j.java_gateway import get_field
 from .State import State
 
 class TestAI(object):
+
+    motionDataDict = {}
+
     def __init__(self, gateway):
         self.gateway = gateway
         
@@ -33,8 +36,14 @@ class TestAI(object):
         
         self.player = player
         self.gameData = gameData
+        
+        myMotionDataList = gameData.getMotionData(False)
+
+        for motionData in myMotionDataList:
+            self.motionDataDict[motionData.actionName] = motionData
+
         self.mcts_root = None
-        State.simulatorAdapter = SimulatorWrapper(self.gateway, self.gameData.getSimulator())
+        State.simulatorAdapter = SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict)
         return 0
         
     def input(self):
@@ -50,7 +59,7 @@ class TestAI(object):
 
         if self.mcts_root == None:
             self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData))
-
+            MonteCarloTreeSearchNode.motionDataDict = self.motionDataDict
         #SkillFlag tells us whether or not we're still executing a skill. 
         # True when queue of inputs waiting to be executed for the skill
         if self.cc.getSkillFlag():
@@ -58,7 +67,7 @@ class TestAI(object):
                 return
         
         action = self.mcts_root.best_action()
-
+        print(action)
         self.inputKey.empty()
         
         self.cc.commandCall(action)

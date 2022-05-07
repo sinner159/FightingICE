@@ -1,5 +1,6 @@
 import sys
 from time import sleep
+from gym_fightingice.envs.Machete import Machete
 from python.KickAI import KickAI
 from final_project_code.TestAI import TestAI
 from python.DisplayInfo import DisplayInfo
@@ -12,8 +13,8 @@ def check_args(args):
 			GAME_NUM = int(args[i+1])
 
 def start_game():
-        p1 = KickAI(gateway)
-        p2 = TestAI(gateway)
+        p1 = TestAI(gateway)
+        p2 = Machete(gateway)
         
         manager.registerAI(p1.__class__.__name__, p1)
         manager.registerAI(p2.__class__.__name__, p2)
