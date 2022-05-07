@@ -1,3 +1,4 @@
+from final_project_code.Actions import ActionsSingleArray
 from final_project_code.wrappers.CharacterDataWrapper import CharacterDataWrapper
 import final_project_code.action as action
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
@@ -15,17 +16,17 @@ class State():
         self.me = CharacterDataWrapper(self.frameData.getCharacter(False))
         self.opp = CharacterDataWrapper(self.frameData.getCharacter(True))
 
-        self.remainingFrames = self.frameData.getRemainingFramesNumber()
         self.distanceY = self.frameData.getDistanceX()
         self.distanceY = self.frameData.getDistanceY()
         self.framesSinceStart = self.frameData.getFramesNumber()
         self.dequeAtkData = self.frameData.getProjectiles()
         self.dequeAtkDatame = self.frameData.getProjectilesByP1()
         self.dequeAtkDataopp = self.frameData.getProjectilesByP2()
-        self.timeSec = self.frameData.getRemainingTime()
-        self.timeMill = self.frameData.getRemainingTimeMilliseconds()
         self.roundNum = self.frameData.getRound()
         self.timeRemaining = self.frameData.getRemainingTimeMilliseconds()
+        self.remainingFrames = self.frameData.getRemainingFramesNumber()
+
+        self.actions:ActionsSingleArray = ActionsSingleArray()
         
     def isGameOver(self):
         if self.frameData.getEmptyFlag():
@@ -40,6 +41,10 @@ class State():
         return State(frameData)
 
 
+    def getUnusedAction(self):
+        return self.actions.getUnusedAction()
+
+    
     def gameResult(self, starting_state: "State"):
         deltaMyHp = (self.me.hp - starting_state.me.hp)
         deltaOppHp = (self.opp.hp - starting_state.opp.hp)

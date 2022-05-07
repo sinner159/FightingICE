@@ -1,4 +1,7 @@
 from collections import defaultdict
+from email import policy
+from final_project_code.RolloutPolicy import RolloutPolicy
+from final_project_code.TreePolicy import TreePolicy
 from final_project_code.action import Action
 import numpy as np
 from final_project_code.State import State
@@ -8,8 +11,15 @@ class MonteCarloTreeSearchNode():
     
     motionDataDict = None
     
-    def __init__(self, state, parent=None, parent_action=None):
+    def __init__(self, state,treePolicy: TreePolicy = None, rolloutPolicy: RolloutPolicy = None, parent=None, parent_action=None):
         self.state: State = state
+        
+        if treePolicy != None:
+            self.treePolicy  = treePolicy
+        
+        if rolloutPolicy != None:
+            self.rolloutPolicy = rolloutPolicy
+
         self.parent = parent
         self.parent_action = parent_action
         self.children = []
@@ -17,13 +27,11 @@ class MonteCarloTreeSearchNode():
         self._results = defaultdict(int)
         self._results[1] = 0
         self._results[-1] = 0
-
-        self.legalActions = Action.ALL_USEFUL_ACTIONS.copy()
-        self.l = len(Action.ALL_USEFUL_ACTIONS) - 1
-        self.m = 0
-
+        
         self.ucb = 0
         self.rollout_action_depth = float('inf')
+
+        self.budget = 16670
     
     def best_action(self):
         
@@ -31,49 +39,20 @@ class MonteCarloTreeSearchNode():
         #self.print_children()
         
         for i in range(simulation_no):
-            current_node: MonteCarloTreeSearchNode = self._treePolicy()
+            current_node: MonteCarloTreeSearchNode = self.treePolicy.getNode(self)
             reward = current_node.rollout()
             current_node.backpropogate(reward)
+
         return self.bestChild().parent_action
-
-
-
-    def _treePolicy(self):
         
-        current_node = self
-        
-        while not current_node.isTerminalNode():
-            
-            #change to ShouldExpand() heuristics for expanding or not
-            if not current_node.isFullyExpanded():
-                return current_node.expand()
-            else:
-                current_node = current_node.bestChild()
-        
-        return current_node
     
     def expand(self):
         
-        action = self.getUntriedAction()
+        action = self.state.getUnusedAction()
         next_state = self.state.simulate([action],[])
-        child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action)
+        child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action,treePolicy=self.treePolicy,rolloutPolicy=self.rolloutPolicy)
         self.children.append(child_node)
         return child_node
-
-    def getUntriedAction(self):
-
-        temp = self.legalActions[self.m] 
-                                        #this one should be i
-        self.legalActions[self.m] = self.legalActions[self.m] 
-        
-        #this one should be i too
-        self.legalActions[self.m] = temp
-        
-        self.m += 1
-
-        return self.legalActions[self.m]
-
-
 
     def rollout(self):
         
@@ -85,10 +64,10 @@ class MonteCarloTreeSearchNode():
         num_actions = 0
         while  rem_frames > 0 and num_actions < self.rollout_action_depth:
             
-            possible_moves = current_rollout_state.getLegalActions()
+            possible_moves = current_rollout_state.actions.legalActions
             
-            action = self.rollout_policy(possible_moves)
-            oppAction = self.rollout_policy(possible_moves)
+            action = self.rolloutPolicy.getNode(possible_moves)
+            oppAction = self.rolloutPolicy.getNode(possible_moves)
             
             myActions.append(action)
             oppActions.append(oppAction)
@@ -104,10 +83,6 @@ class MonteCarloTreeSearchNode():
         reward = result_state.gameResult(current_rollout_state)
         return reward
 
-    def rollout_policy(self, possible_moves):
-
-        return possible_moves[np.random.randint(len(possible_moves))]
-        
     def backpropogate(self, result):
         
         self._number_of_visits += 1.0
@@ -132,11 +107,13 @@ class MonteCarloTreeSearchNode():
         return self.state.isGameOver()
     
     def isFullyExpanded(self):
-        return len(self.m) == self.l
+        return self.state.actions.isFullyExpanded()
     
     def bestChild(self, c_param = .5):
         
         choices_weights = []
+
+        c:MonteCarloTreeSearchNode
         for c in self.children:
             wins = c.wins()
             numVisits =  c.numberOfVisits()

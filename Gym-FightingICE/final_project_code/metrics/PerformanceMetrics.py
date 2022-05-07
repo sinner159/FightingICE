@@ -18,7 +18,7 @@ class PerformanceMetrics():
     def getMetrics(self, state: State):
         self.myHp = state.me.hp
         self.oppHp = state.opp.hp
-        self.roundLength = 60000 - state.timeMill
+        self.roundLength = 60000 - state.timeRemaining
         self.roundWon = False
         
     

@@ -1,5 +1,7 @@
 from collections import deque
 from final_project_code.MCTS_node import MonteCarloTreeSearchNode
+from final_project_code.RolloutPolicy import RolloutPolicy
+from final_project_code.TreePolicy import TreePolicy
 from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
@@ -66,7 +68,7 @@ class TestAI(object):
                 return
 
         if self.mcts_root == None:
-            self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData))
+            self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData),TreePolicy(),RolloutPolicy())
             MonteCarloTreeSearchNode.motionDataDict = self.motionDataDict
         #SkillFlag tells us whether or not we're still executing a skill. 
         # True when queue of inputs waiting to be executed for the skill

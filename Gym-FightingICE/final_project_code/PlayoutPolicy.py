@@ -1,2 +1,0 @@
-class PlayoutPolicy():
-    raise NotImplementedError
