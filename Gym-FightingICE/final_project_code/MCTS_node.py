@@ -26,7 +26,7 @@ class MonteCarloTreeSearchNode():
             current_node: MonteCarloTreeSearchNode = self._treePolicy()
             reward = current_node.rollout()
             current_node.backpropogate(reward)
-        return self.bestChild(c_param=0.5).parent_action
+        return self.bestChild(c_param=4).parent_action
 
     def _treePolicy(self):
         
@@ -55,16 +55,19 @@ class MonteCarloTreeSearchNode():
         current_rollout_state = self.state
         
         myActions = []
+        oppActions = []
         rem_frames = current_rollout_state.remainingFrames
         num_actions = 0
         while  rem_frames > 0 and num_actions < self.rollout_action_depth:
             possible_moves = current_rollout_state.getLegalActions()
             action = self.rollout_policy(possible_moves)
+            oppAction = self.rollout_policy(possible_moves)
             myActions.append(action)
+            oppActions.append(oppAction)
             num_actions += 1
             rem_frames -= self.motionDataDict[action].frameNumber
 
-        result_state = current_rollout_state.simulate(myActions,[])
+        result_state = current_rollout_state.simulate(myActions,oppActions)
 
         return result_state.gameResult()
 
