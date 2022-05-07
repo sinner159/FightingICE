@@ -1,3 +1,19 @@
-Get MTCS up and running
-Create Types for Actions?
-Check if recovery actions mess up simluator frame limit
+DONE -- Get MTCS up and running
+--Check if recovery actions mess up simluator frame limit
+--Add SmartSearch Class to TestAI
+    --Implement Algorithm 3, 4, and 7
+
+-Flesh out ProjectRequirements.txt
+
+--optimize MCTS to work within time
+--increase calculation time limit
+
+--Start slides for final present
+--update midterm presentations
+
+--look into the action parameters
+--make a config file for all tweakable parameters
+
+
+
+
