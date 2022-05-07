@@ -8,9 +8,6 @@ class State():
 
     simulatorAdapter: SimulatorWrapper = None
     
-    legalActions = [action.ALL_USEFUL_ACTIONS].append([action.ALL_USEFUL_ACTIONS])
-    actionBoundary = len(action.ALL_USEFUL_ACTIONS)
-
     def __init__(self, frameData = None):
         
         self.frameData = frameData
@@ -29,19 +26,6 @@ class State():
         self.timeMill = self.frameData.getRemainingTimeMilliseconds()
         self.roundNum = self.frameData.getRound()
         self.timeRemaining = self.frameData.getRemainingTimeMilliseconds()
-
-
-    def getLegalActions(self):
-        
-        # if self.me.onGround():
-        #     return action.GROUND_ACTIONS
-        
-        # if self.me.inAir():
-        #     return action.AIR_ACTIONS
-        
-        #if self.opp.isCrouching():
-
-        return action.ALL_USEFUL_ACTIONS
         
     def isGameOver(self):
         if self.frameData.getEmptyFlag():

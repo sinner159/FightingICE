@@ -21,17 +21,19 @@ class TestAI(object):
     def getInformation(self, frameData, isControl):
         # Getting the frame data of the current frame
         self.frameData = frameData
-
         self.cc.setFrameData(self.frameData, self.player)
 
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
-    	self.logger.write(str(self.performanceMetrics))
+        self.logger.write(str(self.performanceMetrics))
+        endState = State(self.frameData)
+        self.performanceMetrics.getMetrics(endState)
+        self.logger.write(self.performanceMetrics)
         
     	
     # please define this method when you use FightingICE version 4.00 or later
     def getScreenData(self, sd):
-    	pass
+        pass
         
     def initialize(self, gameData, player):
         # Initializng the command center, the simulator and some other things
@@ -49,6 +51,7 @@ class TestAI(object):
 
         self.mcts_root = None
         State.simulatorAdapter = SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict)
+
         return 0
         
     def input(self):

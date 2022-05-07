@@ -13,4 +13,5 @@ class Logger():
 
 
     def write(self, txt):
-        self.file.write(txt)
+        self.file.write(f"{datetime.now()}T- {str(txt)}")
+        self.file.flush()

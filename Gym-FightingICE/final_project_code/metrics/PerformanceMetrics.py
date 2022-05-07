@@ -1,6 +1,7 @@
 
 
 
+from final_project_code.State import State
 from final_project_code.utils.Logger import Logger
 
 
@@ -12,7 +13,13 @@ class PerformanceMetrics():
         self.roundLength = 0
         self.roundWon = False
         self.gamesPlayed = 0
-        self.oppAIName = ""
+        
+    
+    def getMetrics(self, state: State):
+        self.myHp = state.me.hp
+        self.oppHp = state.opp.hp
+        self.roundLength = 60000 - state.timeMill
+        self.roundWon = False
         
     
     def write_to_log(self, logger: Logger):
@@ -23,10 +30,8 @@ class PerformanceMetrics():
         output = f"""
         MyHP: {self.myHp}
         OppHP: {self.oppHp}
-        OppAIName: {self.oppAIName}
         RoundLength: {self.roundLength}
         RoundWon: {self.roundWon}
-        OppAIName: {self.oppAIName}
         """
         return output
 

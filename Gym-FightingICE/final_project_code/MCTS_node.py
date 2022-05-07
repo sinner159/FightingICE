@@ -1,4 +1,5 @@
 from collections import defaultdict
+from final_project_code.action import Action
 import numpy as np
 from final_project_code.State import State
 
@@ -16,24 +17,26 @@ class MonteCarloTreeSearchNode():
         self._results = defaultdict(int)
         self._results[1] = 0
         self._results[-1] = 0
-        self._untried_actions = self.state.getLegalActions().copy()
+
+        self.legalActions = Action.ALL_USEFUL_ACTIONS.copy()
+        self.l = len(Action.ALL_USEFUL_ACTIONS) - 1
+        self.m = 0
+
         self.ucb = 0
         self.rollout_action_depth = float('inf')
     
     def best_action(self):
+        
         simulation_no = 3
-        self.print_children()
+        #self.print_children()
+        
         for i in range(simulation_no):
             current_node: MonteCarloTreeSearchNode = self._treePolicy()
             reward = current_node.rollout()
             current_node.backpropogate(reward)
         return self.bestChild().parent_action
 
-    def print_children(self):
-        print("************Children*************")
-        for c in self.children:
-            print(c)
-        print("************END*************")
+
 
     def _treePolicy(self):
         
@@ -51,11 +54,26 @@ class MonteCarloTreeSearchNode():
     
     def expand(self):
         
-        action = self._untried_actions.pop()
+        action = self.getUntriedAction()
         next_state = self.state.simulate([action],[])
         child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action)
         self.children.append(child_node)
         return child_node
+
+    def getUntriedAction(self):
+
+        temp = self.legalActions[self.m] 
+                                        #this one should be i
+        self.legalActions[self.m] = self.legalActions[self.m] 
+        
+        #this one should be i too
+        self.legalActions[self.m] = temp
+        
+        self.m += 1
+
+        return self.legalActions[self.m]
+
+
 
     def rollout(self):
         
@@ -114,7 +132,7 @@ class MonteCarloTreeSearchNode():
         return self.state.isGameOver()
     
     def isFullyExpanded(self):
-        return len(self._untried_actions) == 0.0
+        return len(self.m) == self.l
     
     def bestChild(self, c_param = .5):
         
@@ -134,4 +152,8 @@ class MonteCarloTreeSearchNode():
     def __repr__(self):
         return str(self)
   
-   
+    def print_children(self):
+        print("************Children*************")
+        for c in self.children:
+            print(c)
+        print("************END*************")
