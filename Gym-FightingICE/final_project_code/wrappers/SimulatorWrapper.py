@@ -1,4 +1,5 @@
 from final_project_code.wrappers.GatewayWrapper import GatewayWrapper
+import time
 
 
 class SimulatorWrapper(GatewayWrapper):
@@ -16,8 +17,9 @@ class SimulatorWrapper(GatewayWrapper):
         myActionsJava = self.getDeque(myActions)
         oppActionsJava = self.getDeque(oppActions)
         
-
+        startSim = time.time()
         frameDataAfter = self.simulator.simulate(frameDataBefore,True, myActionsJava, oppActionsJava, sumFrames)
+        print(f"Sim took {time.time() - startSim}")
         return frameDataAfter
 
     def getTotalFrames(self, myActions):

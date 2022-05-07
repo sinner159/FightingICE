@@ -1,5 +1,6 @@
 from collections import defaultdict
 from email import policy
+import time
 from final_project_code.RolloutPolicy import RolloutPolicy
 from final_project_code.TreePolicy import TreePolicy
 from final_project_code.action import Action
@@ -29,19 +30,21 @@ class MonteCarloTreeSearchNode():
         self._results[-1] = 0
         
         self.ucb = 0
-        self.rollout_action_depth = float('inf')
+        self.simulationFrameLimit = 50
 
-        self.budget = 16670
+        self.budget = 14 #16.67
     
     def best_action(self):
         
-        simulation_no = 3
         #self.print_children()
         
-        for i in range(simulation_no):
+        start = time.time()
+        while time.time() - start < self.budget:
+            startLoop = time.time()
             current_node: MonteCarloTreeSearchNode = self.treePolicy.getNode(self)
             reward = current_node.rollout()
             current_node.backpropogate(reward)
+            print(f"Took {time.time() - startLoop} sec")
 
         return self.bestChild().parent_action
         
@@ -50,7 +53,7 @@ class MonteCarloTreeSearchNode():
         
         action = self.state.getUnusedAction()
         next_state = self.state.simulate([action],[])
-        child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action,treePolicy=self.treePolicy,rolloutPolicy=self.rolloutPolicy)
+        child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action, treePolicy=self.treePolicy, rolloutPolicy=self.rolloutPolicy)
         self.children.append(child_node)
         return child_node
 
@@ -60,25 +63,24 @@ class MonteCarloTreeSearchNode():
         
         myActions = []
         oppActions = []
-        rem_frames = current_rollout_state.remainingFrames
-        num_actions = 0
-        while  rem_frames > 0 and num_actions < self.rollout_action_depth:
+        
+        totalFrames = 0
+        while  True:
             
             possible_moves = current_rollout_state.actions.legalActions
             
             action = self.rolloutPolicy.getNode(possible_moves)
             oppAction = self.rolloutPolicy.getNode(possible_moves)
+
+            actionFrameNum = self.motionDataDict[action].frameNumber
+
+            if actionFrameNum + totalFrames > self.simulationFrameLimit:
+                break
             
+            totalFrames += actionFrameNum
             myActions.append(action)
             oppActions.append(oppAction)
             
-            num_actions += 1
-            
-            actionFN = self.motionDataDict[action].frameNumber
-            if rem_frames - actionFN  - 100 < 0:
-                break
-            rem_frames -= actionFN
-
         result_state = current_rollout_state.simulate(myActions,oppActions)
         reward = result_state.gameResult(current_rollout_state)
         return reward
@@ -109,7 +111,7 @@ class MonteCarloTreeSearchNode():
     def isFullyExpanded(self):
         return self.state.actions.isFullyExpanded()
     
-    def bestChild(self, c_param = .5):
+    def bestChild(self, c_param = 1.4):
         
         choices_weights = []
 
