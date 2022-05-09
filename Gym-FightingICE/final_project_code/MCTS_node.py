@@ -30,8 +30,6 @@ class MonteCarloTreeSearchNode():
         self._results[-1] = 0
         
         self.ucb = 0
-        self.simulationFrameLimit = 150
-
         self.budget = 28 #16.67
     
     def best_action(self):
@@ -43,7 +41,7 @@ class MonteCarloTreeSearchNode():
             #startLoop = time.time()
         for i in range(3):
             current_node: MonteCarloTreeSearchNode = self.treePolicy.getNode(self)
-            reward = current_node.rollout()
+            reward = self.rolloutPolicy.rollout(current_node)
             current_node.backpropogate(reward)
             #print(f"Took {time.time() - startLoop} sec")
 
@@ -53,38 +51,11 @@ class MonteCarloTreeSearchNode():
     def expand(self):
         
         action = self.state.getUnusedAction()
-        next_state = self.state.simulate([action],[])
+        next_state = self.rolloutPolicy.simulateOneMove(self.state.frameData, action)
+
         child_node = MonteCarloTreeSearchNode(next_state, parent = self, parent_action = action, treePolicy=self.treePolicy, rolloutPolicy=self.rolloutPolicy)
         self.children.append(child_node)
         return child_node
-
-    def rollout(self):
-        
-        current_rollout_state = self.state
-        
-        myActions = []
-        oppActions = []
-        
-        totalFrames = 0
-        while  True:
-            
-            possible_moves = current_rollout_state.actions.legalActions
-            
-            action = self.rolloutPolicy.getNode(possible_moves)
-            oppAction = self.rolloutPolicy.getNode(possible_moves)
-
-            actionFrameNum = self.motionDataDict[action].frameNumber
-
-            if actionFrameNum + totalFrames > self.simulationFrameLimit:
-                break
-            
-            totalFrames += actionFrameNum
-            myActions.append(action)
-            oppActions.append(oppAction)
-            
-        result_state = current_rollout_state.simulate(myActions,oppActions)
-        reward = result_state.gameResult(current_rollout_state)
-        return reward
 
     def backpropogate(self, result):
         

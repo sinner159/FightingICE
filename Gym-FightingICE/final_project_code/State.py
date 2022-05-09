@@ -7,14 +7,12 @@ from python.feature_extractor.features_extractor import FightingFeaturesExtracto
 
 class State():
 
-    simulatorAdapter: SimulatorWrapper = None
-    
     def __init__(self, frameData = None):
         
         self.frameData = frameData
 
-        self.me = CharacterDataWrapper(self.frameData.getCharacter(False))
-        self.opp = CharacterDataWrapper(self.frameData.getCharacter(True))
+        self.me = CharacterDataWrapper(self.frameData.getCharacter(True))
+        self.opp = CharacterDataWrapper(self.frameData.getCharacter(False))
 
         self.distanceY = self.frameData.getDistanceX()
         self.distanceY = self.frameData.getDistanceY()
@@ -33,12 +31,6 @@ class State():
             return False
 
         return self.me.hp <= 0 or self.opp.hp <= 0 or self.timeRemaining <= 0 
-
-
-    def simulate(self, myActions,oppActions):
-
-        frameData = self.simulatorAdapter.simulateMoves(self.frameData,myActions,oppActions)
-        return State(frameData)
 
 
     def getUnusedAction(self):

@@ -69,7 +69,7 @@ class TestAI(object):
             self.motionDataDict[motionData.actionName] = MotionDataWrapper(motionData)
 
         self.mcts_root = None
-        State.simulatorAdapter = SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict)
+        
         self.lastTime = time()
         return 0
         
@@ -88,8 +88,8 @@ class TestAI(object):
                 return
 
         if self.mcts_root == None:
-            self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData),TreePolicy(),RolloutPolicy())
-            MonteCarloTreeSearchNode.motionDataDict = self.motionDataDict
+            rolloutPolicy = RolloutPolicy(SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict))
+            self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData),TreePolicy(),rolloutPolicy)
         #SkillFlag tells us whether or not we're still executing a skill. 
         # True when queue of inputs waiting to be executed for the skill
         if self.cc.getSkillFlag():
