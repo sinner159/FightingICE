@@ -30,21 +30,22 @@ class MonteCarloTreeSearchNode():
         self._results[-1] = 0
         
         self.ucb = 0
-        self.simulationFrameLimit = 50
+        self.simulationFrameLimit = 150
 
-        self.budget = 14 #16.67
+        self.budget = 28 #16.67
     
     def best_action(self):
         
         #self.print_children()
         
-        start = time.time()
-        while time.time() - start < self.budget:
-            startLoop = time.time()
+        # start = time.time()
+        # while time.time() - start < self.budget:
+            #startLoop = time.time()
+        for i in range(3):
             current_node: MonteCarloTreeSearchNode = self.treePolicy.getNode(self)
             reward = current_node.rollout()
             current_node.backpropogate(reward)
-            print(f"Took {time.time() - startLoop} sec")
+            #print(f"Took {time.time() - startLoop} sec")
 
         return self.bestChild().parent_action
         
