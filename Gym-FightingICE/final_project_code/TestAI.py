@@ -6,6 +6,7 @@ from final_project_code.TreePolicy import TreePolicy
 from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
+from final_project_code.wrappers.MotionDataWrapper import MotionDataWrapper
 from py4j.java_gateway import get_field
 from .State import State
 
@@ -65,7 +66,7 @@ class TestAI(object):
         myMotionDataList = gameData.getMotionData(False)
 
         for motionData in myMotionDataList:
-            self.motionDataDict[motionData.actionName] = motionData
+            self.motionDataDict[motionData.actionName] = MotionDataWrapper(motionData)
 
         self.mcts_root = None
         State.simulatorAdapter = SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict)
