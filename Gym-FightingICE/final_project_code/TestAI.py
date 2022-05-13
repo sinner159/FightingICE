@@ -75,13 +75,14 @@ class TestAI(object):
         
     def input(self):
         # Return the input for the current frame
+        #print(self.inputKey.A)
         return self.inputKey
         
     def processing(self):
         #compute the input for the current frame
         #================================
-        diff = time() - self.lastTime
-        #print("diff was" + str(diff))
+        
+        
 
         if self.frameData.getEmptyFlag() or self.frameData.getRemainingFramesNumber() <= 0:
                 self.isGameJustStarted = True
@@ -97,7 +98,7 @@ class TestAI(object):
                 return
         
         action = self.mcts_root.best_action()
-        print(action)
+        #print(action)
         self.inputKey.empty()
         
         self.cc.commandCall(action)

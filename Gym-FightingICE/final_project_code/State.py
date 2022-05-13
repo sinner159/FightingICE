@@ -2,6 +2,7 @@ from final_project_code.Actions import ActionsSingleArray
 from final_project_code.wrappers.CharacterDataWrapper import CharacterDataWrapper
 import final_project_code.action as action
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
+import numpy as np
 from py4j.java_gateway import get_method
 from python.feature_extractor.features_extractor import FightingFeaturesExtractor
 
@@ -37,8 +38,11 @@ class State():
         return self.actions.getUnusedAction()
 
     
+    # def gameResult(self, starting_state: "State"):
+    #     deltaMyHp = (self.me.hp - starting_state.me.hp)
+    #     deltaOppHp = (self.opp.hp - starting_state.opp.hp)
+    #     return 1 if deltaMyHp > deltaOppHp else 0
+
+
     def gameResult(self, starting_state: "State"):
-        deltaMyHp = (self.me.hp - starting_state.me.hp)
-        deltaOppHp = (self.opp.hp - starting_state.opp.hp)
-        return 1 if deltaMyHp > deltaOppHp else 0
-        #return 1 if self.me.hp > self.opp.hp else 0
+        return np.random.randint(0,1+1)

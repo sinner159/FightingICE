@@ -9,24 +9,34 @@ class RolloutPolicy():
 
     def rollout(self, node):
         
-        myActions = []
-        oppActions = []
+        possible_moves = node.state.actions.legalActions
+
+        framesSinceStart = node.state.framesSinceStart
+        initMyAction = self.selectAction(possible_moves)
+        initOppAction = self.selectAction(possible_moves)
+
+        myFrameNumber = self.simulator.getFrameNumber(initOppAction)
+        oppFrameNumber = self.simulator.getFrameNumber(initOppAction)
+
+        maxFR = max(myFrameNumber,oppFrameNumber)
+
+        myActions = [initMyAction]
+        oppActions = [initOppAction]
         
         totalFrames = 0
-        actionFrameNum = 0
-        while  True:
-            
-            possible_moves = node.state.actions.legalActions
+        totalFrames += maxFR
+        
+        while  maxFR + totalFrames  < self.simulator.simulationFrameLimit - framesSinceStart:
             
             action = self.selectAction(possible_moves)
             oppAction = self.selectAction(possible_moves)
-            
             actionFrameNum = self.simulator.getFrameNumber(action)
-            
-            if actionFrameNum + totalFrames > self.simulator.simulationFrameLimit:
-                break
+            oppFrameNumber = self.simulator.getFrameNumber(oppAction)
 
-            totalFrames += actionFrameNum
+            maxFR = max(actionFrameNum,oppFrameNumber)
+
+            totalFrames += maxFR
+
             myActions.append(action)
             oppActions.append(oppAction)
 
@@ -36,6 +46,8 @@ class RolloutPolicy():
         reward = result_state.gameResult(node.state)
         return reward
     
+
+
     def simulateOneMove(self, state, action):
         frameData = self.simulator.simulateOneMove(state, [action])
         return State(frameData)
