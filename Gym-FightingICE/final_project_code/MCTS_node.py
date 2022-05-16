@@ -63,8 +63,6 @@ class MonteCarloTreeSearchNode():
         if self.parent:
             self.parent.backpropogate(reward)
 
-
-    
     def isTerminalNode(self):
         return self.state.isGameOver()
     

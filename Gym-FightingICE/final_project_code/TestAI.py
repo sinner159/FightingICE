@@ -7,18 +7,16 @@ from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 from final_project_code.wrappers.MotionDataWrapper import MotionDataWrapper
-from final_project_code.Config import Config
 from .State import State
-import os
 
 class TestAI(object):
 
     motionDataDict = {}
 
-    def __init__(self, gateway):
+    def __init__(self, gateway, config, logger):
         self.gateway = gateway
-        self.logger = Logger(f"{os.getcwd()}/final_project_code/logs/")
-        self.config = Config()
+        self.logger = logger
+        self.config = config
         self.performanceMetrics = PerformanceMetrics(self.config)
         State.eval_function = self.config.eval_function
         ActionsSingleArray.legalActions = self.config.action_set
@@ -129,7 +127,7 @@ class TestAI(object):
         
         
         self.cc.commandCall(action)
-        print(f"Action: {action} FrameNum: {self.state.framesSinceStart}")
+        #print(f"Action: {action} FrameNum: {self.state.framesSinceStart}")
 
         
     # This part is mandatory
