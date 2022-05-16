@@ -22,3 +22,5 @@ def runGame(port, config :Config, logger):
 
     gateway.close_callback_server()
     gateway.close()
+
+    return p1.performanceMetrics

@@ -20,6 +20,7 @@ class TestAI(object):
         self.performanceMetrics = PerformanceMetrics(self.config)
         State.eval_function = self.config.eval_function
         ActionsSingleArray.legalActions = self.config.action_set
+        self.roundEnded = False
         
         
     def close(self):
@@ -55,12 +56,13 @@ class TestAI(object):
 
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
-
         if not self.frameData.getEmptyFlag():
+            self.roundEnded = True
+
             endState = State(self.frameData)
             self.performanceMetrics.getMetrics(endState)
-            self.logger.write(self.performanceMetrics)
-            self.performanceMetrics = PerformanceMetrics(self.config)
+            self.performanceMetrics.write_to_log(self.logger)
+            
         
     	
     # please define this method when you use FightingICE version 4.00 or later
@@ -105,7 +107,9 @@ class TestAI(object):
         if self.mcts_root == None:
             self.rolloutPolicy = RolloutPolicy(SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict, self.config.simulation_limt))
             
-           
+        if self.roundEnded:
+            self.roundEnded = False
+            self.performanceMetrics.nextRound()
         
         #SkillFlag tells us whether or not we're still executing a skill. 
         # True when queue of inputs waiting to be executed for the skill
