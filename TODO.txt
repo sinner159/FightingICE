@@ -17,3 +17,26 @@ DONE -- Get MTCS up and running
 
 
 
+--Starts getting data at frame 15
+
+
+
+
+
+
+--Does each action have an input for every frame of the action?
+    Don't know yet
+
+--Do we need to exec commandCall when a skill is not being executed?
+--What happens if inputKey is empty?
+--Does frame wait for us to return from the prossecing method?
+    Dky
+
+
+
+--When processing is first called, is getskillFlag true?
+No
+
+
+Can change delay in line 43 of AIController
+

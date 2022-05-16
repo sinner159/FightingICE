@@ -1,5 +1,5 @@
-from collections import deque
 from time import time
+from final_project_code.Actions import ActionsSingleArray
 from final_project_code.MCTS_node import MonteCarloTreeSearchNode
 from final_project_code.RolloutPolicy import RolloutPolicy
 from final_project_code.TreePolicy import TreePolicy
@@ -7,17 +7,22 @@ from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 from final_project_code.wrappers.MotionDataWrapper import MotionDataWrapper
-from py4j.java_gateway import get_field
+from final_project_code.Config import Config
 from .State import State
+import os
 
 class TestAI(object):
 
     motionDataDict = {}
 
-    def __init__(self, gateway, performanceMetrics: PerformanceMetrics, logger: Logger):
+    def __init__(self, gateway):
         self.gateway = gateway
-        self.performanceMetrics = performanceMetrics
-        self.logger = logger
+        self.logger = Logger(f"{os.getcwd()}/final_project_code/logs/")
+        self.config = Config()
+        self.performanceMetrics = PerformanceMetrics(self.config)
+        State.eval_function = self.config.eval_function
+        ActionsSingleArray.legalActions = self.config.action_set
+        
         
     def close(self):
         pass
@@ -38,17 +43,26 @@ class TestAI(object):
 	#  * @param isControl
 	#  *            whether the character can act. this parameter is not delayed
 	#  *            unlike {@link struct.CharacterData#isControl()}
+
+
+
+    #This frame is from 15 frames ago
     def getInformation(self, frameData, isControl):
         # Getting the frame data of the current frame
+        self.isControl = isControl
         self.frameData = frameData
+        if not self.frameData.getEmptyFlag():
+            self.state = State(self.frameData)
         self.cc.setFrameData(self.frameData, self.player)
 
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
-        self.logger.write(str(self.performanceMetrics))
-        endState = State(self.frameData)
-        self.performanceMetrics.getMetrics(endState)
-        self.logger.write(self.performanceMetrics)
+
+        if not self.frameData.getEmptyFlag():
+            endState = State(self.frameData)
+            self.performanceMetrics.getMetrics(endState)
+            self.logger.write(self.performanceMetrics)
+            self.performanceMetrics = PerformanceMetrics(self.config)
         
     	
     # please define this method when you use FightingICE version 4.00 or later
@@ -60,7 +74,7 @@ class TestAI(object):
         self.inputKey = self.gateway.jvm.struct.Key()
         self.frameData = self.gateway.jvm.struct.FrameData()
         self.cc = self.gateway.jvm.aiinterface.CommandCenter()
-        
+        self.isControl = True
         self.player = player
         self.gameData = gameData
         myMotionDataList = gameData.getMotionData(False)
@@ -69,42 +83,55 @@ class TestAI(object):
             self.motionDataDict[motionData.actionName] = MotionDataWrapper(motionData)
 
         self.mcts_root = None
-        
+        self.lastFrameNumber = 0
         self.lastTime = time()
         return 0
         
     def input(self):
         # Return the input for the current frame
-        #print(self.inputKey.A)
+        # #print(self.inputKey.A)
+        #print(f"A: {self.inputKey.A} B: {self.inputKey.B} C: {self.inputKey.C} D: {self.inputKey.D} L: {self.inputKey.L} R: {self.inputKey.R} U: {self.inputKey.U}")
         return self.inputKey
         
     def processing(self):
         #compute the input for the current frame
         #================================
         
-        
-
-        if self.frameData.getEmptyFlag() or self.frameData.getRemainingFramesNumber() <= 0:
+        #print(f"isControl: {self.isControl}")
+        frameEmpty= self.frameData.getEmptyFlag()
+        #print(f"frameEmpty: {frameEmpty} FrameNumber: {self.frameData.getFramesNumber()}  RemFrames: {self.frameData.getRemainingFramesNumber()}")
+        if frameEmpty or self.frameData.getRemainingFramesNumber() <= 0:
                 self.isGameJustStarted = True
                 return
 
         if self.mcts_root == None:
-            rolloutPolicy = RolloutPolicy(SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict))
-            self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData),TreePolicy(),rolloutPolicy)
+            self.rolloutPolicy = RolloutPolicy(SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict, self.config.simulation_limt))
+            
+           
+        
         #SkillFlag tells us whether or not we're still executing a skill. 
         # True when queue of inputs waiting to be executed for the skill
-        if self.cc.getSkillFlag():
+        flag = self.cc.getSkillFlag()
+        #print(f"getSkillFlag is: {flag}")
+        if flag:
                 self.inputKey = self.cc.getSkillKey()
                 return
-        
-        action = self.mcts_root.best_action()
-        #print(action)
+
         self.inputKey.empty()
+        #self.cc.skillCancel()
+        
+        self.mcts_root = MonteCarloTreeSearchNode(State(self.frameData), self.config.c_param,self.config.num_simulations, TreePolicy(),self.rolloutPolicy)
+        action = self.mcts_root.best_action()
+        
+        diffFrames = self.state.framesSinceStart - self.lastFrameNumber
+        self.lastFrameNumber = self.state.framesSinceStart
+        self.performanceMetrics.addRunningAvg(diffFrames)
+        
         
         self.cc.commandCall(action)
-        self.lastTime = time()
-      
-                        
+        print(f"Action: {action} FrameNum: {self.state.framesSinceStart}")
+
+        
     # This part is mandatory
     class Java:
         implements = ["aiinterface.AIInterface"]

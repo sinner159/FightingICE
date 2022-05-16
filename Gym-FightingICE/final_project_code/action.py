@@ -187,8 +187,55 @@ GROUND_ACTIONS = [
     Action.STAND_F_D_DFB,
     Action.STAND_D_DB_BB
 ]
+BASIC_ACTIONS = [
+    Action.FORWARD_WALK,
+    Action.DASH,
+    Action.JUMP,
+    Action.FOR_JUMP,
+    Action.BACK_JUMP,
+    Action.STAND_GUARD,
+    Action.CROUCH_GUARD,
+    Action.AIR_GUARD
+    
+]
+
+QUICK_ACTIONS = [
+    Action.CROUCH_A,
+    Action.AIR_A,
+    Action.STAND_A,
+    Action.CROUCH_FA,
+    Action.STAND_FA,
+    Action.AIR_DA,
+    Action.STAND_D_DB_BB,
+    Action.AIR_F_D_DFA,
+]
+
+POWERFUL_ACTIONS = [
+    Action.STAND_D_DF_FC,
+    Action.STAND_F_D_DFB,
+    Action.AIR_D_DB_BB,
+    Action.AIR_D_DF_FB,
+    Action.STAND_D_DB_BB,
+    Action.AIR_UB,
+    Action.AIR_F_D_DFB,
+    Action.STAND_D_DF_FB,
+    Action.THROW_B,
+    Action.AIR_D_DB_BA,
+]
+ONLY_PROJECTILES = [
+]
 
 ALL_ACTIONS = [a.value for a in Action]
 ALL_USEFUL_ACTIONS = [a.value for a in Action if a not in USELESS_ACTIONS]
 AIR_ACTIONS = [a.value for a in AIR_ACTIONS]
 GROUND_ACTIONS = [a.value for a in GROUND_ACTIONS]
+
+ALL_Q = QUICK_ACTIONS + BASIC_ACTIONS
+ALL_QUICK_ACTIONS = [a.value for a in ALL_Q]
+
+ALL_P = POWERFUL_ACTIONS + BASIC_ACTIONS
+ALL_POWERFUL_ACTIONS = [a.value for a in ALL_P]
+
+ALL_BASIC_ACTIONS = [a.value for a in BASIC_ACTIONS]
+
+

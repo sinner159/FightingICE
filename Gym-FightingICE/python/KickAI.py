@@ -13,14 +13,11 @@ class KickAI(object):
         self.cc.setFrameData(self.frameData, self.player)
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
-    	print(x)
-    	print(y)
-    	print(z)
-    	
+        pass
     # please define this method when you use FightingICE version 4.00 or later
     def getScreenData(self, sd):
-    	pass
-        
+        pass
+    
     def initialize(self, gameData, player):
         # Initializng the command center, the simulator and some other things
         self.inputKey = self.gateway.jvm.struct.Key()
@@ -51,7 +48,7 @@ class KickAI(object):
         self.cc.skillCancel()     
 
         # Just spam kick
-        self.cc.commandCall("B")
+        self.cc.commandCall("STAND_B")
                         
     # This part is mandatory
     class Java:

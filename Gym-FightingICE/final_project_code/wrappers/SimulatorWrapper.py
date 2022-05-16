@@ -4,11 +4,11 @@ import time
 
 class SimulatorWrapper(GatewayWrapper):
 
-    def __init__(self, gateway, simulator, motionDataDict):
+    def __init__(self, gateway, simulator, motionDataDict, simulationFrameLimit):
         super().__init__(gateway)
         self.simulator = simulator
         self.motionDataDict = motionDataDict
-        self.simulationFrameLimit = 500
+        self.simulationFrameLimit = simulationFrameLimit
 
 #simulate(FrameData frameData, boolean playerNumber, java.util.Deque<Action> myAct, java.util.Deque<Action> oppAct, int simulationLimit)
     def simulate(self,frameDataBefore, myActions, oppActions, totalFrames):

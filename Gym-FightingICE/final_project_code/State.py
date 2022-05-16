@@ -8,6 +8,7 @@ from python.feature_extractor.features_extractor import FightingFeaturesExtracto
 
 class State():
 
+    eval_function = None
     def __init__(self, frameData = None):
         
         self.frameData = frameData
@@ -35,14 +36,20 @@ class State():
 
 
     def getUnusedAction(self):
+
         return self.actions.getUnusedAction()
 
     
-    # def gameResult(self, starting_state: "State"):
-    #     deltaMyHp = (self.me.hp - starting_state.me.hp)
-    #     deltaOppHp = (self.opp.hp - starting_state.opp.hp)
-    #     return 1 if deltaMyHp > deltaOppHp else 0
-
-
     def gameResult(self, starting_state: "State"):
-        return np.random.randint(0,1+1)
+
+        if self.eval_function == "HPDIFF":
+            deltaMyHp = (self.me.hp - starting_state.me.hp)
+            deltaOppHp = (self.opp.hp - starting_state.opp.hp)
+            return deltaMyHp - deltaOppHp 
+        else:
+            print("INVALID EVAL FUNCTION GIVEN!!!!")
+            return np.random.randint(0,1+1)
+
+
+    # def gameResult(self, starting_state: "State"):
+    #     return np.random.randint(0,1+1)

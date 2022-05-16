@@ -2,7 +2,7 @@ import sys
 from time import sleep
 from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
-from python.machete import Machete
+from python.KickAI import KickAI
 from final_project_code.TestAI import TestAI
 from python.DisplayInfo import DisplayInfo
 from py4j.java_gateway import JavaGateway, GatewayParameters, CallbackServerParameters, get_field
@@ -15,8 +15,8 @@ def check_args(args):
 			GAME_NUM = int(args[i+1])
 
 def start_game():
-        p1 = TestAI(gateway, PerformanceMetrics(), Logger(f"{os.getcwd()}/final_project_code/logs/"))
-        p2 = Machete(gateway)
+        p1 = TestAI(gateway)
+        p2 = KickAI(gateway)
         
         manager.registerAI(p1.__class__.__name__, p1)
         manager.registerAI(p2.__class__.__name__, p2)

@@ -31,6 +31,18 @@
             "justMyCode": false
         }
         {
+            "name": "Python: TestAIWithServerMCTSAI",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Gym-FightingICE/python/Main_PyAIvsJavaAI.py",//${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "python": "${workspaceFolder}/venv/Scripts/python.exe",
+            "localRoot": "${workspaceFolder}/Gym-FightingICE/",
+            "remoteRoot": "${workspaceFolder}/Gym-FightingICE/",
+            "cwd": "${workspaceFolder}/Gym-FightingICE/",
+            "justMyCode": false
+        }
+        {
             "name": "Python: TestAINoServer",
             "type": "python",
             "request": "launch",
