@@ -1,6 +1,7 @@
 from final_project_code.State import State
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 import numpy as np
+
 class RolloutPolicy():
 
     def __init__(self, simulator: SimulatorWrapper) -> None:
@@ -10,10 +11,10 @@ class RolloutPolicy():
     def rollout(self, node):
         
         possible_moves = node.state.actions.legalActions
-
+        possible_opp_moves = node.state.actions.legalOppActions
         framesSinceStart = node.state.framesSinceStart
         initMyAction = self.selectAction(possible_moves)
-        initOppAction = self.selectAction(possible_moves)
+        initOppAction = self.selectAction(possible_opp_moves)
 
         myFrameNumber = self.simulator.getFrameNumber(initOppAction)
         oppFrameNumber = self.simulator.getFrameNumber(initOppAction)
@@ -29,7 +30,7 @@ class RolloutPolicy():
         while  maxFR + totalFrames  < self.simulator.simulationFrameLimit - framesSinceStart:
             
             action = self.selectAction(possible_moves)
-            oppAction = self.selectAction(possible_moves)
+            oppAction = self.selectAction(possible_opp_moves)
             actionFrameNum = self.simulator.getFrameNumber(action)
             oppFrameNumber = self.simulator.getFrameNumber(oppAction)
 

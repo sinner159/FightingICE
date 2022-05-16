@@ -1,10 +1,6 @@
 from final_project_code.Actions import ActionsSingleArray
 from final_project_code.wrappers.CharacterDataWrapper import CharacterDataWrapper
-import final_project_code.action as action
-from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 import numpy as np
-from py4j.java_gateway import get_method
-from python.feature_extractor.features_extractor import FightingFeaturesExtractor
 
 class State():
 

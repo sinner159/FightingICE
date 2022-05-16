@@ -13,7 +13,7 @@ class Chromosome():
 
 
     def __str__(self):
-        return ''.join(self.actions)
+        return ','.join(self.actions)
     
     def __repr__(self) -> str:
         return str(self)

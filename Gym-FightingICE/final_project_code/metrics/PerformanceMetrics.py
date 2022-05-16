@@ -63,7 +63,11 @@ class PerformanceMetrics():
 
     def write_to_log(self, logger: Logger):
         logger.write(f"Config Used: {self.config}")
-        self.roundData[self.round].write_to_log(logger)
+        i = 1
+        for round in self.roundData:
+            logger.write(f"Round {i}")
+            i+=1
+            round.write_to_log(logger)
 
     def addRunningAvg(self, diffFrames):
         self.roundData[self.round].addRunningAvg(diffFrames)

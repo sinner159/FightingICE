@@ -1,9 +1,10 @@
-from final_project_code.action import ALL_QUICK_ACTIONS, ALL_BASIC_ACTIONS
+from final_project_code.action import ALL_USEFUL_ACTIONS
 import numpy as np
 
 class ActionsSingleArray():
     
     legalActions = None
+    legalOppActions = ALL_USEFUL_ACTIONS.copy()
     
     def __init__(self):
         self.l = len(self.legalActions) - 1
