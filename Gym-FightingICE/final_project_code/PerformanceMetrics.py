@@ -76,6 +76,7 @@ class PerformanceMetrics():
             avgRound.roundLength += round.roundLength
             avgRound.roundWon += round.roundWon
             avgRound.hpGap += round.hpGap
+            avgRound.avg_frames_for_action += round.avg_frames_for_action
             i+=1
 
         avgRound.myHp /= i
@@ -83,6 +84,7 @@ class PerformanceMetrics():
         avgRound.roundLength /= i
         avgRound.roundWon /= i
         avgRound.hpGap /= i
+        avgRound.avg_frames_for_action /= i
 
         logger.write("Average:\n")
         avgRound.write_to_log(logger)
@@ -90,3 +92,4 @@ class PerformanceMetrics():
 
     def addRunningAvg(self, diffFrames):
         self.roundData[self.round].addRunningAvg(diffFrames)
+

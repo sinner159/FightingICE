@@ -11,16 +11,16 @@ import os
 
 
 port = 4242
-generation_count = 10
+generation_count = 2
 loadFromFile = True
-c = Config(maxHP=100,rounds=1)
+c = Config(maxHP=400,rounds=3)
 cmd = f"start java -cp FightingICE.jar;./lib/lwjgl/*;./lib/natives/windows/*;./lib/*;  Main --limithp {c.maxHP} {c.maxHP} --grey-bg --py4j --mute --fr 60 --json -r {c.rounds} --port {port}"
 dir = f"{os.getcwd()}/final_project_code"
 p = subprocess.Popen(cmd, shell=True)
 logger = Logger(f"{dir}/logs/")
 
 #                       populationSize, chromosomeLength, selection_size, logger
-ga = GAActionSelection(f"{dir}/generation/Generation.txt",populationSize=6,chromosomeLength=10,selection_size=6,logger=logger)
+ga = GAActionSelection(f"{dir}/generation/Generation.txt",populationSize=10,chromosomeLength=10,selection_size=4,logger=logger)
 if loadFromFile:
     ga.loadFromFile()
 else:

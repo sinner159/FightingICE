@@ -1,7 +1,7 @@
 from final_project_code.action import ALL_QUICK_ACTIONS
 class Config():
 
-    def __init__(self, c_param = 1.4, 
+    def __init__(self, c_param = 5, 
                         eval_function = "HPDIFF", 
                         sim_limit = 500, 
                         num_simulations = 3, 

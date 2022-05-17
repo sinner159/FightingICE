@@ -1,6 +1,7 @@
 from final_project_code.Chromosome import Chromosome
 from final_project_code.action import Action, ALL_USEFUL_ACTIONS
 import numpy as np
+
 class GAActionSelection():
 
     def __init__(self, filename, populationSize, chromosomeLength, selection_size, logger):
