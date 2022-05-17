@@ -1,0 +1,94 @@
+2022-05-17 01:44:29.884789T- Config Used: 
+C: 5 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: GA_ACTIONS 
+opponent_ai: MctsAi 
+maxHP: 400 
+rounds: 5
+
+2022-05-17 01:44:29.885778T- Round 1
+2022-05-17 01:44:29.885778T- 
+MyHPLost: 298
+OppHPLost: 233
+HPGap: -65
+RoundLength: 50966
+RoundWon: False
+AvgFramesForAction: 15.945169712793733
+        
+2022-05-17 01:44:29.885778T- Round 2
+2022-05-17 01:44:29.885778T- 
+MyHPLost: 325
+OppHPLost: 197
+HPGap: -128
+RoundLength: 42933
+RoundWon: False
+AvgFramesForAction: 6.435185185185185
+        
+2022-05-17 01:44:29.885778T- Round 3
+2022-05-17 01:44:29.886804T- 
+MyHPLost: 398
+OppHPLost: 248
+HPGap: -150
+RoundLength: 57516
+RoundWon: False
+AvgFramesForAction: 1.9977168949771689
+        
+2022-05-17 01:44:29.886804T- Average:
+
+2022-05-17 01:44:29.886804T- 
+MyHPLost: 355.25
+OppHPLost: 269.5
+HPGap: -85.75
+RoundLength: 37853.75
+RoundWon: 0.0
+AvgFramesForAction: 6.094517948239022
+        
+2022-05-17 01:47:42.309577T- Config Used: 
+C: 5 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: GA_ACTIONS 
+opponent_ai: DiceAI 
+maxHP: 400 
+rounds: 5
+
+2022-05-17 01:47:42.309577T- Round 1
+2022-05-17 01:47:42.309577T- 
+MyHPLost: 314
+OppHPLost: 363
+HPGap: 49
+RoundLength: 59683
+RoundWon: False
+AvgFramesForAction: 15.420258620689655
+        
+2022-05-17 01:47:42.309577T- Round 2
+2022-05-17 01:47:42.309577T- 
+MyHPLost: 218
+OppHPLost: 117
+HPGap: -101
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: -0.008733624454148471
+        
+2022-05-17 01:47:42.309577T- Round 3
+2022-05-17 01:47:42.309577T- 
+MyHPLost: 399
+OppHPLost: 166
+HPGap: -233
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 15.240425531914894
+        
+2022-05-17 01:47:42.309577T- Average:
+
+2022-05-17 01:47:42.309577T- 
+MyHPLost: 332.75
+OppHPLost: 261.5
+HPGap: -71.25
+RoundLength: 44795.75
+RoundWon: 0.0
+AvgFramesForAction: 7.6629876320376
+        
