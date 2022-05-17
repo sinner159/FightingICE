@@ -7,6 +7,7 @@ class Logger():
 
         if not os.path.isdir(filePathDir):
             os.mkdir(filePathDir)
+        print("Logger constructer called!!!")
         string = datetime.now().strftime("%Y%m%d_%H%M%S")
         self.fileName = f"log_{string}.log"
         self.file = open(f"{filePathDir}{self.fileName}",'a')

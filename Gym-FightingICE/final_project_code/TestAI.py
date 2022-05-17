@@ -3,7 +3,7 @@ from final_project_code.Actions import ActionsSingleArray
 from final_project_code.MCTS_node import MonteCarloTreeSearchNode
 from final_project_code.RolloutPolicy import RolloutPolicy
 from final_project_code.TreePolicy import TreePolicy
-from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
+from final_project_code.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from final_project_code.wrappers.SimulatorWrapper import SimulatorWrapper
 from final_project_code.wrappers.MotionDataWrapper import MotionDataWrapper
@@ -20,7 +20,7 @@ class TestAI(object):
         self.performanceMetrics = PerformanceMetrics(self.config)
         State.eval_function = self.config.eval_function
         ActionsSingleArray.legalActions = self.config.action_set
-        self.roundEnded = False
+        self.currentRound = 1
         
         
     def close(self):
@@ -52,16 +52,18 @@ class TestAI(object):
         self.frameData = frameData
         if not self.frameData.getEmptyFlag():
             self.state = State(self.frameData)
+            
+                
+
         self.cc.setFrameData(self.frameData, self.player)
+
 
     # please define this method when you use FightingICE version 3.20 or later
     def roundEnd(self, x, y, z):
         if not self.frameData.getEmptyFlag():
-            self.roundEnded = True
-
             endState = State(self.frameData)
             self.performanceMetrics.getMetrics(endState)
-            self.performanceMetrics.write_to_log(self.logger)
+            self.lastFrameNumber = 0
             
         
     	
@@ -107,8 +109,8 @@ class TestAI(object):
         if self.mcts_root == None:
             self.rolloutPolicy = RolloutPolicy(SimulatorWrapper(self.gateway, self.gameData.getSimulator(), self.motionDataDict, self.config.simulation_limt))
             
-        if self.roundEnded:
-            self.roundEnded = False
+        if self.state.roundNum > self.currentRound:
+            self.currentRound = self.state.roundNum
             self.performanceMetrics.nextRound()
         
         #SkillFlag tells us whether or not we're still executing a skill. 

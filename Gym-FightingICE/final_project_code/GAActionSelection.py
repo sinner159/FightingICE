@@ -3,12 +3,14 @@ from final_project_code.action import Action, ALL_USEFUL_ACTIONS
 import numpy as np
 class GAActionSelection():
 
-    def __init__(self, filename, populationSize, chromosomeLength):
+    def __init__(self, filename, populationSize, chromosomeLength, selection_size, logger):
         self.populationSize = populationSize
         self.filename = filename
         self.all_actions = ALL_USEFUL_ACTIONS.copy()
         self.chromosomeLength = chromosomeLength
         self.population = []
+        self.logger = logger
+        self.selection_size = selection_size
 
     def initialization(self):
         for i in range(self.populationSize):
@@ -21,15 +23,31 @@ class GAActionSelection():
 
             self.population.append(chromosome)
             
-    
+    def loadFromFile(self):
+        f = open(self.filename,"r")
+        lines = f.readlines()
+        for line in lines:
+            line = line.replace("\n","")
+            chrm = Chromosome()
+            actions = line.split(",")
+            chrm.addActions(actions)
+            self.population.append(chrm)
+
     def selection(self):
         
+        self.logger.write(f"Selection begin")
+        chrm:Chromosome
         for chrm in self.population:
             chrm.fitness = self.fitness(chrm)
-            
+        
         self.population.sort(key=lambda x: x.fitness, reverse=True)
 
-        return self.population[0:4]
+        self.logger.write(f"Ranking")
+        for chrm in self.population:
+            self.logger.write(f"ID: {chrm.name} Fitness Level: {chrm.fitness}")
+
+        self.logger.write(f"Selecting top {self.selection_size}")
+        return self.population[0:self.selection_size]
 
 
     def recombination(self, newPop:list):
@@ -52,13 +70,22 @@ class GAActionSelection():
 
     def mutation(self):
         
+        chrm:Chromosome
         for chrm in self.population:
            i =  np.random.randint(0, 10)
            if i == 1:
-               action = np.random.choice(self.all_actions,1)
+               self.logger.write(f"Mutating ID: {chrm.name}")
+               action = np.random.choice(self.all_actions,1)[0]
                random_index = np.random.randint(0, len(chrm.actions))
                chrm.actions[random_index] = action
             
 
     def fitness(self, chrm: Chromosome):
         return chrm.performanceMetrics.roundData[0].hpGap
+
+
+    def populationAsString(self):
+        ret = "\n"
+        for chrm in self.population:
+            ret += f"{chrm}\n"
+        return ret

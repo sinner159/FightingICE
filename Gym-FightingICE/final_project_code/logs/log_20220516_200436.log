@@ -1,0 +1,833 @@
+2022-05-16 20:04:36.048801T- Running simulations for Generation 0
+2022-05-16 20:04:36.048801T- Population of Gen 0
+2022-05-16 20:04:36.048801T- 
+ID: 935eb2f4-8c89-4790-9a29-3820630ef748 actions: AIR_GUARD,AIR_D_DB_BA,AIR_UA,CROUCH_B,AIR_F_D_DFB,STAND_B,STAND_D_DF_FB,AIR_D_DB_BB,STAND_A,STAND_D_DF_FA
+ID: 20e7ebcf-b617-4190-abd2-e5246346208a actions: AIR_FA,STAND_F_D_DFB,JUMP,AIR_B,CROUCH_GUARD,NEUTRAL,FORWARD_WALK,STAND_FA,BACK_STEP,STAND_D_DF_FC
+ID: a4af2b2a-821d-45ee-bde1-82df2fb71e59 actions: BACK_JUMP,CROUCH,AIR_D_DB_BB,AIR_A,STAND_FB,DASH,CROUCH_FB,AIR_D_DB_BA,STAND_D_DF_FA,AIR_FB
+ID: 2b8d5221-f650-427d-8096-6bbc078e09d7 actions: FOR_JUMP,STAND_D_DB_BA,CROUCH,CROUCH_A,STAND_D_DB_BB,DASH,STAND_F_D_DFA,AIR_D_DF_FB,STAND_F_D_DFB,AIR_FA
+ID: a0eb53a6-8349-4d0b-b5ad-d46725762e60 actions: STAND_FA,STAND_B,AIR_FB,AIR_D_DF_FA,AIR_UA,CROUCH,DASH,STAND_F_D_DFA,AIR_F_D_DFA,AIR_DB
+ID: a136cf0c-004f-4d3f-8b83-64a7542afe14 actions: AIR_FB,AIR_F_D_DFB,DASH,AIR_A,CROUCH,CROUCH_A,STAND_A,STAND_D_DF_FC,AIR_D_DB_BA,STAND_GUARD
+ID: f753e871-c4c0-4981-9304-9c521707e000 actions: THROW_B,AIR_F_D_DFB,AIR_D_DF_FB,AIR_D_DF_FA,STAND_D_DF_FA,THROW_A,AIR_D_DB_BB,STAND_GUARD,JUMP,FORWARD_WALK
+ID: 2c89f7bc-0f9b-43ca-9338-464d186ef0c2 actions: FORWARD_WALK,NEUTRAL,STAND_FA,CROUCH_FA,AIR_FA,STAND_D_DF_FA,STAND_F_D_DFB,AIR_D_DB_BA,DASH,AIR_D_DB_BB
+ID: df00494b-2810-4d4b-b114-8e1b22d4e8ee actions: AIR_DA,STAND_D_DF_FA,THROW_A,AIR_F_D_DFB,DASH,STAND_FB,CROUCH,AIR_UB,STAND_D_DF_FB,AIR_D_DB_BA
+ID: 0d43cdf6-58e4-4f46-92ea-69080c10ccd0 actions: AIR_DA,AIR_F_D_DFB,NEUTRAL,DASH,STAND_D_DB_BA,AIR_F_D_DFA,AIR_DB,STAND_B,AIR_FB,AIR_GUARD
+ID: daea4d9b-af4e-4995-9e18-72c36f79a8b9 actions: STAND_D_DF_FB,AIR_D_DB_BA,STAND_FB,DASH,THROW_B,AIR_D_DF_FA,AIR_UA,STAND_D_DB_BA,AIR_A,THROW_A
+ID: 94b4de3f-b47f-4167-916a-77f6b2242347 actions: STAND_GUARD,BACK_STEP,STAND_D_DF_FC,AIR_F_D_DFB,JUMP,STAND_D_DF_FB,CROUCH_GUARD,STAND_D_DB_BA,AIR_F_D_DFA,BACK_JUMP
+ID: 4d10c196-e2c5-429b-aef2-7c49a955abd8 actions: AIR_F_D_DFA,AIR_DA,STAND_GUARD,AIR_D_DB_BB,CROUCH_FA,STAND_D_DB_BB,AIR_FB,CROUCH_FB,THROW_B,CROUCH
+ID: 50b2c442-17d0-4d42-97aa-8185818a90dc actions: BACK_JUMP,STAND_D_DF_FC,JUMP,AIR_GUARD,AIR_UB,STAND_FB,BACK_STEP,AIR_FA,STAND_F_D_DFB,AIR_F_D_DFB
+ID: 5f1599c1-2c17-4d4f-ac67-1a880806e2e1 actions: STAND_GUARD,AIR_FB,CROUCH_FB,FORWARD_WALK,AIR_D_DB_BB,AIR_DA,CROUCH,AIR_UA,AIR_D_DF_FB,STAND_D_DF_FB
+ID: 72882926-b267-4e26-bf8a-2bbad804e863 actions: FOR_JUMP,CROUCH_FA,AIR_F_D_DFB,STAND_D_DF_FC,FORWARD_WALK,STAND_D_DB_BA,BACK_STEP,AIR_F_D_DFA,STAND_FB,DASH
+ID: 690f452a-46eb-4674-969e-06795df4a2b4 actions: CROUCH_FA,AIR_D_DB_BB,AIR_GUARD,AIR_F_D_DFB,JUMP,STAND_F_D_DFA,DASH,STAND_D_DB_BB,NEUTRAL,STAND_D_DF_FB
+ID: b59fbb3b-e6cf-481f-8534-b6a591c00b63 actions: BACK_STEP,AIR_F_D_DFB,CROUCH_B,BACK_JUMP,AIR_UA,AIR_GUARD,STAND_GUARD,AIR_D_DF_FA,STAND_A,STAND_D_DF_FC
+ID: 9b66a5f1-c6dc-4eaa-827b-f3ae838af99e actions: AIR_FA,JUMP,STAND_D_DF_FA,THROW_A,AIR_DA,CROUCH_FB,NEUTRAL,STAND_FA,AIR_GUARD,STAND_F_D_DFA
+ID: e3a3edf2-794a-42ac-8fcb-1ead06374674 actions: CROUCH_GUARD,AIR_F_D_DFA,CROUCH_FB,THROW_B,AIR_FA,BACK_JUMP,AIR_A,AIR_DB,THROW_A,STAND_FB
+
+2022-05-16 20:04:36.050802T- Simulating for 935eb2f4-8c89-4790-9a29-3820630ef748
+2022-05-16 20:05:43.597884T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 935eb2f4-8c89-4790-9a29-3820630ef748 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:05:43.597884T- Round 1
+2022-05-16 20:05:43.597884T- 
+MyHPLost: 394
+OppHPLost: 150
+HPGap: -244
+RoundLength: 46050
+RoundWon: False
+AvgFramesForAction: 8.008695652173913
+        
+2022-05-16 20:05:43.597884T- Simulating for 20e7ebcf-b617-4190-abd2-e5246346208a
+2022-05-16 20:06:52.611741T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 20e7ebcf-b617-4190-abd2-e5246346208a 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:06:52.611741T- Round 1
+2022-05-16 20:06:52.611741T- 
+MyHPLost: 390
+OppHPLost: 103
+HPGap: -287
+RoundLength: 58633
+RoundWon: False
+AvgFramesForAction: 7.714912280701754
+        
+2022-05-16 20:06:52.611741T- Simulating for a4af2b2a-821d-45ee-bde1-82df2fb71e59
+2022-05-16 20:07:56.732941T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: a4af2b2a-821d-45ee-bde1-82df2fb71e59 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:07:56.732941T- Round 1
+2022-05-16 20:07:56.732941T- 
+MyHPLost: 396
+OppHPLost: 81
+HPGap: -315
+RoundLength: 55516
+RoundWon: False
+AvgFramesForAction: 7.710648148148148
+        
+2022-05-16 20:07:56.732941T- Simulating for 2b8d5221-f650-427d-8096-6bbc078e09d7
+2022-05-16 20:08:53.316605T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 2b8d5221-f650-427d-8096-6bbc078e09d7 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:08:53.316605T- Round 1
+2022-05-16 20:08:53.316605T- 
+MyHPLost: 398
+OppHPLost: 95
+HPGap: -303
+RoundLength: 48200
+RoundWon: False
+AvgFramesForAction: 8.078212290502794
+        
+2022-05-16 20:08:53.316605T- Simulating for a0eb53a6-8349-4d0b-b5ad-d46725762e60
+2022-05-16 20:10:00.993393T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: a0eb53a6-8349-4d0b-b5ad-d46725762e60 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:10:00.993393T- Round 1
+2022-05-16 20:10:00.993393T- 
+MyHPLost: 326
+OppHPLost: 129
+HPGap: -197
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 7.973273942093541
+        
+2022-05-16 20:10:00.993393T- Simulating for a136cf0c-004f-4d3f-8b83-64a7542afe14
+2022-05-16 20:10:59.254158T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: a136cf0c-004f-4d3f-8b83-64a7542afe14 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:10:59.254158T- Round 1
+2022-05-16 20:10:59.254158T- 
+MyHPLost: 392
+OppHPLost: 225
+HPGap: -167
+RoundLength: 49166
+RoundWon: False
+AvgFramesForAction: 7.804232804232805
+        
+2022-05-16 20:10:59.254158T- Simulating for f753e871-c4c0-4981-9304-9c521707e000
+2022-05-16 20:11:48.637145T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: f753e871-c4c0-4981-9304-9c521707e000 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:11:48.637145T- Round 1
+2022-05-16 20:11:48.637145T- 
+MyHPLost: 397
+OppHPLost: 47
+HPGap: -350
+RoundLength: 40750
+RoundWon: False
+AvgFramesForAction: 7.81150159744409
+        
+2022-05-16 20:11:48.637145T- Simulating for 2c89f7bc-0f9b-43ca-9338-464d186ef0c2
+2022-05-16 20:12:35.601277T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 2c89f7bc-0f9b-43ca-9338-464d186ef0c2 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:12:35.601277T- Round 1
+2022-05-16 20:12:35.601277T- 
+MyHPLost: 398
+OppHPLost: 84
+HPGap: -314
+RoundLength: 38916
+RoundWon: False
+AvgFramesForAction: 7.922033898305084
+        
+2022-05-16 20:12:35.601277T- Simulating for df00494b-2810-4d4b-b114-8e1b22d4e8ee
+2022-05-16 20:13:22.333372T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: df00494b-2810-4d4b-b114-8e1b22d4e8ee 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:13:22.333372T- Round 1
+2022-05-16 20:13:22.333372T- 
+MyHPLost: 399
+OppHPLost: 87
+HPGap: -312
+RoundLength: 38700
+RoundWon: False
+AvgFramesForAction: 7.4423076923076925
+        
+2022-05-16 20:13:22.333372T- Simulating for 0d43cdf6-58e4-4f46-92ea-69080c10ccd0
+2022-05-16 20:14:10.705239T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 0d43cdf6-58e4-4f46-92ea-69080c10ccd0 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:14:10.705239T- Round 1
+2022-05-16 20:14:10.705239T- 
+MyHPLost: 397
+OppHPLost: 85
+HPGap: -312
+RoundLength: 40300
+RoundWon: False
+AvgFramesForAction: 7.75
+        
+2022-05-16 20:14:10.705239T- Simulating for daea4d9b-af4e-4995-9e18-72c36f79a8b9
+2022-05-16 20:15:03.297039T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: daea4d9b-af4e-4995-9e18-72c36f79a8b9 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:15:03.297039T- Round 1
+2022-05-16 20:15:03.297039T- 
+MyHPLost: 394
+OppHPLost: 87
+HPGap: -307
+RoundLength: 44350
+RoundWon: False
+AvgFramesForAction: 7.849557522123894
+        
+2022-05-16 20:15:03.297039T- Simulating for 94b4de3f-b47f-4167-916a-77f6b2242347
+2022-05-16 20:16:09.878328T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 94b4de3f-b47f-4167-916a-77f6b2242347 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:16:09.878328T- Round 1
+2022-05-16 20:16:09.878328T- 
+MyHPLost: 390
+OppHPLost: 68
+HPGap: -322
+RoundLength: 58366
+RoundWon: False
+AvgFramesForAction: 8.304038004750593
+        
+2022-05-16 20:16:09.878328T- Simulating for 4d10c196-e2c5-429b-aef2-7c49a955abd8
+2022-05-16 20:17:18.412529T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 4d10c196-e2c5-429b-aef2-7c49a955abd8 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:17:18.412529T- Round 1
+2022-05-16 20:17:18.412529T- 
+MyHPLost: 386
+OppHPLost: 223
+HPGap: -163
+RoundLength: 59733
+RoundWon: False
+AvgFramesForAction: 7.404958677685951
+        
+2022-05-16 20:17:18.412529T- Simulating for 50b2c442-17d0-4d42-97aa-8185818a90dc
+2022-05-16 20:18:26.947356T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 50b2c442-17d0-4d42-97aa-8185818a90dc 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:18:26.947356T- Round 1
+2022-05-16 20:18:26.948354T- 
+MyHPLost: 316
+OppHPLost: 112
+HPGap: -204
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 7.5473684210526315
+        
+2022-05-16 20:18:26.948354T- Simulating for 5f1599c1-2c17-4d4f-ac67-1a880806e2e1
+2022-05-16 20:19:31.087577T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 5f1599c1-2c17-4d4f-ac67-1a880806e2e1 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:19:31.087577T- Round 1
+2022-05-16 20:19:31.088570T- 
+MyHPLost: 388
+OppHPLost: 226
+HPGap: -162
+RoundLength: 55433
+RoundWon: False
+AvgFramesForAction: 7.246187363834423
+        
+2022-05-16 20:19:31.088570T- Simulating for 72882926-b267-4e26-bf8a-2bbad804e863
+2022-05-16 20:20:33.190290T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 72882926-b267-4e26-bf8a-2bbad804e863 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:20:33.190290T- Round 1
+2022-05-16 20:20:33.190290T- 
+MyHPLost: 396
+OppHPLost: 61
+HPGap: -335
+RoundLength: 53000
+RoundWon: False
+AvgFramesForAction: 8.153846153846153
+        
+2022-05-16 20:20:33.190290T- Simulating for 690f452a-46eb-4674-969e-06795df4a2b4
+2022-05-16 20:21:42.123684T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 690f452a-46eb-4674-969e-06795df4a2b4 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:21:42.123684T- Round 1
+2022-05-16 20:21:42.123684T- 
+MyHPLost: 364
+OppHPLost: 105
+HPGap: -259
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 8.038116591928251
+        
+2022-05-16 20:21:42.123684T- Simulating for b59fbb3b-e6cf-481f-8534-b6a591c00b63
+2022-05-16 20:22:51.208311T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: b59fbb3b-e6cf-481f-8534-b6a591c00b63 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:22:51.208311T- Round 1
+2022-05-16 20:22:51.208311T- 
+MyHPLost: 262
+OppHPLost: 240
+HPGap: -22
+RoundLength: 59666
+RoundWon: False
+AvgFramesForAction: 7.7155172413793105
+        
+2022-05-16 20:22:51.208311T- Simulating for 9b66a5f1-c6dc-4eaa-827b-f3ae838af99e
+2022-05-16 20:23:44.548515T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 9b66a5f1-c6dc-4eaa-827b-f3ae838af99e 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:23:44.548515T- Round 1
+2022-05-16 20:23:44.548515T- 
+MyHPLost: 395
+OppHPLost: 84
+HPGap: -311
+RoundLength: 44600
+RoundWon: False
+AvgFramesForAction: 7.294277929155314
+        
+2022-05-16 20:23:44.548515T- Simulating for e3a3edf2-794a-42ac-8fcb-1ead06374674
+2022-05-16 20:24:38.279622T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: e3a3edf2-794a-42ac-8fcb-1ead06374674 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:24:38.279622T- Round 1
+2022-05-16 20:24:38.279622T- 
+MyHPLost: 388
+OppHPLost: 71
+HPGap: -317
+RoundLength: 45083
+RoundWon: False
+AvgFramesForAction: 7.213333333333333
+        
+2022-05-16 20:24:38.279622T- Selection begin
+2022-05-16 20:24:38.279622T- Ranking
+2022-05-16 20:24:38.279622T- ID: b59fbb3b-e6cf-481f-8534-b6a591c00b63 Fitness Level: -22
+2022-05-16 20:24:38.279622T- ID: 5f1599c1-2c17-4d4f-ac67-1a880806e2e1 Fitness Level: -162
+2022-05-16 20:24:38.279622T- ID: 4d10c196-e2c5-429b-aef2-7c49a955abd8 Fitness Level: -163
+2022-05-16 20:24:38.279622T- ID: a136cf0c-004f-4d3f-8b83-64a7542afe14 Fitness Level: -167
+2022-05-16 20:24:38.279622T- ID: a0eb53a6-8349-4d0b-b5ad-d46725762e60 Fitness Level: -197
+2022-05-16 20:24:38.279622T- ID: 50b2c442-17d0-4d42-97aa-8185818a90dc Fitness Level: -204
+2022-05-16 20:24:38.279622T- ID: 935eb2f4-8c89-4790-9a29-3820630ef748 Fitness Level: -244
+2022-05-16 20:24:38.279622T- ID: 690f452a-46eb-4674-969e-06795df4a2b4 Fitness Level: -259
+2022-05-16 20:24:38.279622T- ID: 20e7ebcf-b617-4190-abd2-e5246346208a Fitness Level: -287
+2022-05-16 20:24:38.279622T- ID: 2b8d5221-f650-427d-8096-6bbc078e09d7 Fitness Level: -303
+2022-05-16 20:24:38.279622T- ID: daea4d9b-af4e-4995-9e18-72c36f79a8b9 Fitness Level: -307
+2022-05-16 20:24:38.279622T- ID: 9b66a5f1-c6dc-4eaa-827b-f3ae838af99e Fitness Level: -311
+2022-05-16 20:24:38.279622T- ID: df00494b-2810-4d4b-b114-8e1b22d4e8ee Fitness Level: -312
+2022-05-16 20:24:38.279622T- ID: 0d43cdf6-58e4-4f46-92ea-69080c10ccd0 Fitness Level: -312
+2022-05-16 20:24:38.279622T- ID: 2c89f7bc-0f9b-43ca-9338-464d186ef0c2 Fitness Level: -314
+2022-05-16 20:24:38.279622T- ID: a4af2b2a-821d-45ee-bde1-82df2fb71e59 Fitness Level: -315
+2022-05-16 20:24:38.279622T- ID: e3a3edf2-794a-42ac-8fcb-1ead06374674 Fitness Level: -317
+2022-05-16 20:24:38.279622T- ID: 94b4de3f-b47f-4167-916a-77f6b2242347 Fitness Level: -322
+2022-05-16 20:24:38.279622T- ID: 72882926-b267-4e26-bf8a-2bbad804e863 Fitness Level: -335
+2022-05-16 20:24:38.280619T- ID: f753e871-c4c0-4981-9304-9c521707e000 Fitness Level: -350
+2022-05-16 20:24:38.280619T- Selecting top 6
+2022-05-16 20:24:38.280619T- Mutating ID: bc10093b-ba75-4d60-8b2b-ab6af94b5338
+2022-05-16 20:24:38.280619T- Running simulations for Generation 1
+2022-05-16 20:24:38.281619T- Population of Gen 1
+2022-05-16 20:24:38.281619T- 
+ID: 7881a5a6-0729-46a5-9ba3-d6188725c370 actions: DASH,AIR_FB,AIR_A,AIR_DA,DASH,AIR_F_D_DFB,STAND_F_D_DFA,STAND_F_D_DFB,AIR_FB,AIR_UB
+ID: bc10093b-ba75-4d60-8b2b-ab6af94b5338 actions: AIR_UA,FOR_JUMP,JUMP,BACK_JUMP,AIR_D_DB_BA,STAND_D_DF_FB,AIR_D_DF_FA,CROUCH,AIR_DA,STAND_D_DF_FC
+ID: 6e1fd389-178a-4686-9391-bf98d7c8e00b actions: STAND_D_DF_FC,AIR_F_D_DFB,AIR_UA,AIR_GUARD,CROUCH_FB,AIR_A,FORWARD_WALK,STAND_D_DB_BB,CROUCH_A,AIR_D_DF_FA
+ID: 58b1eb18-faef-4d68-87f7-4b60cdbaaef0 actions: JUMP,BACK_JUMP,AIR_FB,CROUCH_FB,AIR_FB,AIR_GUARD,AIR_A,BACK_STEP,AIR_DB,AIR_DA
+ID: e4fb2425-b38a-408d-a9d0-b748b8fc646f actions: AIR_F_D_DFB,CROUCH,AIR_GUARD,CROUCH,STAND_B,AIR_FB,THROW_B,CROUCH,AIR_F_D_DFB,CROUCH
+ID: 38b999ac-19a9-432f-b441-51fee36a0307 actions: AIR_D_DF_FB,AIR_UA,BACK_JUMP,AIR_F_D_DFA,AIR_FA,DASH,AIR_DB,AIR_DA,STAND_D_DF_FB,AIR_DA
+ID: 3c3daa36-b908-4cc2-a700-3b6b130c926e actions: AIR_FB,BACK_JUMP,AIR_FB,THROW_B,BACK_STEP,AIR_F_D_DFB,AIR_F_D_DFA,CROUCH_FB,STAND_D_DF_FC,STAND_D_DF_FC
+ID: d1d47eb0-4875-4eb2-97cb-d02d7e056db7 actions: CROUCH,CROUCH_A,STAND_FA,CROUCH,AIR_D_DF_FA,AIR_UA,AIR_DB,AIR_UA,FORWARD_WALK,BACK_STEP
+ID: c69059a2-4c62-451c-be9f-eeeb6d3aedd1 actions: STAND_FA,BACK_STEP,CROUCH,CROUCH_A,STAND_B,STAND_GUARD,AIR_FA,AIR_D_DF_FA,AIR_D_DB_BA,AIR_F_D_DFB
+ID: 8873386d-eff1-488b-aaa6-73ca968dc5c5 actions: CROUCH,AIR_DA,BACK_JUMP,AIR_UA,AIR_F_D_DFB,CROUCH,STAND_FB,STAND_D_DF_FB,CROUCH,AIR_UA
+ID: b9c2242d-e530-4824-a5c3-18355d63acd6 actions: CROUCH,AIR_F_D_DFB,STAND_D_DF_FC,STAND_F_D_DFB,BACK_JUMP,STAND_D_DF_FB,FORWARD_WALK,AIR_D_DB_BA,AIR_FA,BACK_JUMP
+ID: 34be4af6-bfd4-4e35-b181-c3792cb94a0a actions: STAND_D_DB_BB,STAND_GUARD,STAND_GUARD,AIR_D_DB_BB,CROUCH,AIR_D_DB_BA,AIR_UA,CROUCH_FB,CROUCH_FB,JUMP
+ID: d4861534-0bd7-412b-b9a2-6f63e1ddcd7b actions: AIR_D_DB_BB,AIR_D_DF_FA,CROUCH,STAND_FA,DASH,JUMP,AIR_A,AIR_F_D_DFB,STAND_A,AIR_FB
+ID: e6ef399e-f914-44a7-9b5d-588b8187f33b actions: AIR_UA,CROUCH,AIR_F_D_DFB,DASH,STAND_D_DF_FB,FORWARD_WALK,AIR_DA,AIR_D_DB_BB,AIR_F_D_DFA,CROUCH_B
+ID: 43e34181-cf72-4db8-b489-3128fbdc23ad actions: AIR_FB,AIR_FA,STAND_D_DB_BB,STAND_GUARD,AIR_D_DF_FA,AIR_GUARD,AIR_FB,STAND_D_DF_FC,AIR_GUARD,BACK_STEP
+ID: 83ed1bd6-3d09-42ba-8fb2-bc07a352b89c actions: AIR_F_D_DFA,AIR_F_D_DFB,CROUCH_FB,CROUCH,FORWARD_WALK,AIR_UA,AIR_UA,AIR_GUARD,BACK_JUMP,AIR_DB
+ID: 783c7c37-0fc3-43cb-8dd2-525952762bf7 actions: AIR_DA,AIR_D_DF_FA,CROUCH,AIR_UA,AIR_D_DB_BB,AIR_F_D_DFA,AIR_D_DB_BA,STAND_B,FORWARD_WALK,AIR_DB
+ID: 0ba2594d-bf48-4a81-9cde-f7aca846a0d0 actions: STAND_GUARD,STAND_A,CROUCH,STAND_FB,CROUCH_FB,AIR_D_DB_BA,STAND_D_DB_BB,AIR_GUARD,CROUCH,STAND_D_DF_FB
+ID: 9eb603c1-b923-4bc1-95d5-f0db308a92b8 actions: AIR_D_DB_BA,STAND_D_DB_BB,AIR_A,STAND_B,AIR_F_D_DFA,STAND_FB,CROUCH_A,AIR_F_D_DFB,FORWARD_WALK,AIR_F_D_DFB
+ID: 16d0ba52-75e5-44d4-abbe-0e3450da19bb actions: STAND_FA,AIR_GUARD,AIR_UB,AIR_FB,BACK_JUMP,CROUCH_FB,AIR_FB,AIR_D_DF_FA,STAND_D_DF_FC,DASH
+
+2022-05-16 20:24:38.281619T- Simulating for 7881a5a6-0729-46a5-9ba3-d6188725c370
+2022-05-16 20:25:46.838971T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 7881a5a6-0729-46a5-9ba3-d6188725c370 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:25:46.838971T- Round 1
+2022-05-16 20:25:46.838971T- 
+MyHPLost: 358
+OppHPLost: 151
+HPGap: -207
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 7.863736263736263
+        
+2022-05-16 20:25:46.838971T- Simulating for bc10093b-ba75-4d60-8b2b-ab6af94b5338
+2022-05-16 20:26:49.242034T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: bc10093b-ba75-4d60-8b2b-ab6af94b5338 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:26:49.242034T- Round 1
+2022-05-16 20:26:49.242034T- 
+MyHPLost: 388
+OppHPLost: 100
+HPGap: -288
+RoundLength: 53133
+RoundWon: False
+AvgFramesForAction: 7.775609756097561
+        
+2022-05-16 20:26:49.242034T- Simulating for 6e1fd389-178a-4686-9391-bf98d7c8e00b
+2022-05-16 20:27:58.600438T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 6e1fd389-178a-4686-9391-bf98d7c8e00b 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:27:58.600438T- Round 1
+2022-05-16 20:27:58.600438T- 
+MyHPLost: 332
+OppHPLost: 117
+HPGap: -215
+RoundLength: 59733
+RoundWon: False
+AvgFramesForAction: 7.690987124463519
+        
+2022-05-16 20:27:58.600438T- Simulating for 58b1eb18-faef-4d68-87f7-4b60cdbaaef0
+2022-05-16 20:29:06.969074T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 58b1eb18-faef-4d68-87f7-4b60cdbaaef0 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:29:06.969074T- Round 1
+2022-05-16 20:29:06.969074T- 
+MyHPLost: 396
+OppHPLost: 90
+HPGap: -306
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 7.015686274509804
+        
+2022-05-16 20:29:06.969074T- Simulating for e4fb2425-b38a-408d-a9d0-b748b8fc646f
+2022-05-16 20:30:12.952246T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: e4fb2425-b38a-408d-a9d0-b748b8fc646f 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:30:12.952246T- Round 1
+2022-05-16 20:30:12.952246T- 
+MyHPLost: 398
+OppHPLost: 180
+HPGap: -218
+RoundLength: 56900
+RoundWon: False
+AvgFramesForAction: 7.437908496732026
+        
+2022-05-16 20:30:12.952246T- Simulating for 38b999ac-19a9-432f-b441-51fee36a0307
+2022-05-16 20:31:10.596292T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 38b999ac-19a9-432f-b441-51fee36a0307 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:31:10.596292T- Round 1
+2022-05-16 20:31:10.596292T- 
+MyHPLost: 392
+OppHPLost: 135
+HPGap: -257
+RoundLength: 48583
+RoundWon: False
+AvgFramesForAction: 7.9427792915531334
+        
+2022-05-16 20:31:10.596292T- Simulating for 3c3daa36-b908-4cc2-a700-3b6b130c926e
+2022-05-16 20:32:19.323617T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 3c3daa36-b908-4cc2-a700-3b6b130c926e 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:32:19.323617T- Round 1
+2022-05-16 20:32:19.323617T- 
+MyHPLost: 356
+OppHPLost: 130
+HPGap: -226
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 7.966666666666667
+        
+2022-05-16 20:32:19.324600T- Simulating for d1d47eb0-4875-4eb2-97cb-d02d7e056db7
+2022-05-16 20:33:15.443198T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: d1d47eb0-4875-4eb2-97cb-d02d7e056db7 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:33:15.443198T- Round 1
+2022-05-16 20:33:15.443198T- 
+MyHPLost: 396
+OppHPLost: 86
+HPGap: -310
+RoundLength: 46800
+RoundWon: False
+AvgFramesForAction: 7.108585858585859
+        
+2022-05-16 20:33:15.443198T- Simulating for c69059a2-4c62-451c-be9f-eeeb6d3aedd1
+2022-05-16 20:33:59.386885T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: c69059a2-4c62-451c-be9f-eeeb6d3aedd1 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:33:59.386885T- Round 1
+2022-05-16 20:33:59.386885T- 
+MyHPLost: 396
+OppHPLost: 10
+HPGap: -386
+RoundLength: 35933
+RoundWon: False
+AvgFramesForAction: 7.460207612456747
+        
+2022-05-16 20:33:59.386885T- Simulating for 8873386d-eff1-488b-aaa6-73ca968dc5c5
+2022-05-16 20:34:51.840265T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 8873386d-eff1-488b-aaa6-73ca968dc5c5 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:34:51.840265T- Round 1
+2022-05-16 20:34:51.840265T- 
+MyHPLost: 396
+OppHPLost: 64
+HPGap: -332
+RoundLength: 43750
+RoundWon: False
+AvgFramesForAction: 7.481481481481482
+        
+2022-05-16 20:34:51.841264T- Simulating for b9c2242d-e530-4824-a5c3-18355d63acd6
+2022-05-16 20:35:59.993775T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: b9c2242d-e530-4824-a5c3-18355d63acd6 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:35:59.993775T- Round 1
+2022-05-16 20:35:59.993775T- 
+MyHPLost: 382
+OppHPLost: 225
+HPGap: -157
+RoundLength: 59733
+RoundWon: False
+AvgFramesForAction: 8.09255079006772
+        
+2022-05-16 20:35:59.993775T- Simulating for 34be4af6-bfd4-4e35-b181-c3792cb94a0a
+2022-05-16 20:37:04.930030T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 34be4af6-bfd4-4e35-b181-c3792cb94a0a 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:37:04.930030T- Round 1
+2022-05-16 20:37:04.930030T- 
+MyHPLost: 398
+OppHPLost: 246
+HPGap: -152
+RoundLength: 56700
+RoundWon: False
+AvgFramesForAction: 7.595982142857143
+        
+2022-05-16 20:37:04.930030T- Simulating for d4861534-0bd7-412b-b9a2-6f63e1ddcd7b
+2022-05-16 20:37:59.583860T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: d4861534-0bd7-412b-b9a2-6f63e1ddcd7b 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:37:59.583860T- Round 1
+2022-05-16 20:37:59.583860T- 
+MyHPLost: 392
+OppHPLost: 30
+HPGap: -362
+RoundLength: 46383
+RoundWon: False
+AvgFramesForAction: 7.7091412742382275
+        
+2022-05-16 20:37:59.583860T- Simulating for e6ef399e-f914-44a7-9b5d-588b8187f33b
+2022-05-16 20:38:58.884397T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: e6ef399e-f914-44a7-9b5d-588b8187f33b 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:38:58.884397T- Round 1
+2022-05-16 20:38:58.884397T- 
+MyHPLost: 394
+OppHPLost: 130
+HPGap: -264
+RoundLength: 50816
+RoundWon: False
+AvgFramesForAction: 8.262872628726287
+        
+2022-05-16 20:38:58.884397T- Simulating for 43e34181-cf72-4db8-b489-3128fbdc23ad
+2022-05-16 20:40:07.680545T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 43e34181-cf72-4db8-b489-3128fbdc23ad 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:40:07.680545T- Round 1
+2022-05-16 20:40:07.680545T- 
+MyHPLost: 302
+OppHPLost: 106
+HPGap: -196
+RoundLength: 59700
+RoundWon: False
+AvgFramesForAction: 7.670235546038544
+        
+2022-05-16 20:40:07.680545T- Simulating for 83ed1bd6-3d09-42ba-8fb2-bc07a352b89c
+2022-05-16 20:41:16.532230T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 83ed1bd6-3d09-42ba-8fb2-bc07a352b89c 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:41:16.532230T- Round 1
+2022-05-16 20:41:16.532230T- 
+MyHPLost: 358
+OppHPLost: 100
+HPGap: -258
+RoundLength: 59683
+RoundWon: False
+AvgFramesForAction: 7.475991649269311
+        
+2022-05-16 20:41:16.532230T- Simulating for 783c7c37-0fc3-43cb-8dd2-525952762bf7
+2022-05-16 20:42:06.720008T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 783c7c37-0fc3-43cb-8dd2-525952762bf7 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:42:06.720008T- Round 1
+2022-05-16 20:42:06.720008T- 
+MyHPLost: 396
+OppHPLost: 60
+HPGap: -336
+RoundLength: 41566
+RoundWon: False
+AvgFramesForAction: 7.745341614906832
+        
+2022-05-16 20:42:06.720008T- Simulating for 0ba2594d-bf48-4a81-9cde-f7aca846a0d0
+2022-05-16 20:43:12.670086T- Config Used: 
+C: 1.4 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: 0ba2594d-bf48-4a81-9cde-f7aca846a0d0 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 1
+
+2022-05-16 20:43:12.670086T- Round 1
+2022-05-16 20:43:12.670086T- 
+MyHPLost: 394
+OppHPLost: 198
+HPGap: -196
+RoundLength: 57350
+RoundWon: False
+AvgFramesForAction: 7.258947368421053
+        
+2022-05-16 20:43:12.670086T- Simulating for 9eb603c1-b923-4bc1-95d5-f0db308a92b8

@@ -7,7 +7,6 @@ def runGame(port, config :Config, logger):
    
     gateway = JavaGateway(gateway_parameters=GatewayParameters(port=port,auto_field=True), callback_server_parameters=CallbackServerParameters());
     manager = gateway.entry_point
-
     p1 = TestAI(gateway, config, logger)
 
     manager.registerAI(p1.__class__.__name__, p1)
@@ -24,3 +23,4 @@ def runGame(port, config :Config, logger):
     gateway.close()
 
     return p1.performanceMetrics
+

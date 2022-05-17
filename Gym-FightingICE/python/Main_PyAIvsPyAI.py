@@ -1,6 +1,6 @@
 import sys
 from time import sleep
-from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
+from final_project_code.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from python.KickAI import KickAI
 from final_project_code.TestAI import TestAI

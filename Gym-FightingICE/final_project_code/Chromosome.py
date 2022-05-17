@@ -1,4 +1,4 @@
-from uuid import uuid1
+from uuid import  uuid4
 
 
 class Chromosome():
@@ -6,14 +6,17 @@ class Chromosome():
     def __init__(self):
         self.actions: list = []
         self.performanceMetrics = None
-        self.name = str(uuid1())
+        self.name = str(uuid4())
+        self.fitness = 0
 
-    def addAction(self, action: list):
+    def addAction(self, action):
         self.actions.append(action)
 
-
+    def addActions(self, actions: list):
+        self.actions = actions.copy()
+        
     def __str__(self):
-        return ','.join(self.actions)
+        return f"ID: {self.name} actions: " + ','.join(self.actions)
     
     def __repr__(self) -> str:
         return str(self)

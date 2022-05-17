@@ -1,7 +1,7 @@
 import sys
 from time import sleep
 from final_project_code.Config import Config
-from final_project_code.metrics.PerformanceMetrics import PerformanceMetrics
+from final_project_code.PerformanceMetrics import PerformanceMetrics
 from final_project_code.utils.Logger import Logger
 from gym_fightingice.envs.Machete import Machete
 from python.KickAI import KickAI

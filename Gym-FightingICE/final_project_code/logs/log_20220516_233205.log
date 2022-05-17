@@ -1,0 +1,141 @@
+2022-05-16 23:35:24.519236T- Config Used: 
+C: 5 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: ALL_QUICK_ACTIONS 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 5
+
+2022-05-16 23:35:24.519236T- Round 1
+2022-05-16 23:35:24.519236T- 
+MyHPLost: 338
+OppHPLost: 215
+HPGap: -123
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 14.738683127572017
+        
+2022-05-16 23:35:24.519236T- Round 2
+2022-05-16 23:35:24.520236T- 
+MyHPLost: 390
+OppHPLost: 247
+HPGap: -143
+RoundLength: 59683
+RoundWon: False
+AvgFramesForAction: 7.345679012345679
+        
+2022-05-16 23:35:24.521240T- Round 3
+2022-05-16 23:35:24.521240T- 
+MyHPLost: 326
+OppHPLost: 179
+HPGap: -147
+RoundLength: 59700
+RoundWon: False
+AvgFramesForAction: 7.30879345603272
+        
+2022-05-16 23:35:24.521240T- Average:
+
+2022-05-16 23:35:24.521240T- 
+MyHPLost: 363.5
+OppHPLost: 260.25
+HPGap: -103.25
+RoundLength: 44783.25
+RoundWon: 0.0
+AvgFramesForAction: 0
+        
+2022-05-16 23:38:40.432614T- Config Used: 
+C: 6 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: ALL_QUICK_ACTIONS 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 5
+
+2022-05-16 23:38:40.432614T- Round 1
+2022-05-16 23:38:40.432614T- 
+MyHPLost: 346
+OppHPLost: 148
+HPGap: -198
+RoundLength: 59733
+RoundWon: False
+AvgFramesForAction: 14.793388429752065
+        
+2022-05-16 23:38:40.432614T- Round 2
+2022-05-16 23:38:40.432614T- 
+MyHPLost: 392
+OppHPLost: 97
+HPGap: -295
+RoundLength: 57000
+RoundWon: False
+AvgFramesForAction: 7.060869565217391
+        
+2022-05-16 23:38:40.432614T- Round 3
+2022-05-16 23:38:40.432614T- 
+MyHPLost: 368
+OppHPLost: 188
+HPGap: -180
+RoundLength: 59750
+RoundWon: False
+AvgFramesForAction: 0.3191919191919192
+        
+2022-05-16 23:38:40.432614T- Average:
+
+2022-05-16 23:38:40.432614T- 
+MyHPLost: 376.5
+OppHPLost: 208.25
+HPGap: -168.25
+RoundLength: 44120.75
+RoundWon: 0.0
+AvgFramesForAction: 0
+        
+2022-05-16 23:41:26.944260T- Config Used: 
+C: 7 
+eval: HPDIFF 
+sim_limit: 500 
+num_simulations: 3 
+action_set: ALL_QUICK_ACTIONS 
+opponent_ai: Toothless 
+maxHP: 400 
+rounds: 5
+
+2022-05-16 23:41:26.944260T- Round 1
+2022-05-16 23:41:26.944260T- 
+MyHPLost: 350
+OppHPLost: 119
+HPGap: -231
+RoundLength: 59700
+RoundWon: False
+AvgFramesForAction: 14.935281837160751
+        
+2022-05-16 23:41:26.944260T- Round 2
+2022-05-16 23:41:26.944260T- 
+MyHPLost: 396
+OppHPLost: 72
+HPGap: -324
+RoundLength: 47300
+RoundWon: False
+AvgFramesForAction: 5.401554404145077
+        
+2022-05-16 23:41:26.944260T- Round 3
+2022-05-16 23:41:26.944260T- 
+MyHPLost: 392
+OppHPLost: 80
+HPGap: -312
+RoundLength: 46116
+RoundWon: False
+AvgFramesForAction: 7.250673854447439
+        
+2022-05-16 23:41:26.944260T- Average:
+
+2022-05-16 23:41:26.944260T- 
+MyHPLost: 384.5
+OppHPLost: 167.75
+HPGap: -216.75
+RoundLength: 38279.0
+RoundWon: 0.0
+AvgFramesForAction: 0
+        
