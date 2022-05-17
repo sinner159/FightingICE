@@ -15,7 +15,6 @@ OppHPLost: 400
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.935008T- Average:
 
@@ -25,7 +24,6 @@ OppHPLost: 400.0
 HPGap: 0.0
 RoundLength: 0.0
 RoundWon: 0.0
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.935008T- Round 2
 2022-05-16 23:07:43.936009T- 
@@ -34,7 +32,6 @@ OppHPLost: 400
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.937009T- Average:
 
@@ -44,7 +41,6 @@ OppHPLost: 400.0
 HPGap: 0.0
 RoundLength: 0.0
 RoundWon: 0.0
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.942009T- Round 3
 2022-05-16 23:07:43.943009T- 
@@ -53,7 +49,6 @@ OppHPLost: 400
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.944011T- Average:
 
@@ -63,7 +58,6 @@ OppHPLost: 400.0
 HPGap: 0.0
 RoundLength: 0.0
 RoundWon: 0.0
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.947009T- Round 4
 2022-05-16 23:07:43.948013T- 
@@ -72,7 +66,6 @@ OppHPLost: 400
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 23:07:43.952011T- Average:
 
@@ -82,5 +75,4 @@ OppHPLost: 400.0
 HPGap: 0.0
 RoundLength: 0.0
 RoundWon: 0.0
-AvgFramesForAction: 0
         

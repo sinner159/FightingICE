@@ -15,7 +15,6 @@ OppHPLost: 70
 HPGap: -318
 RoundLength: 47700
 RoundWon: False
-AvgFramesForAction: 7.5514511873350925
         
 2022-05-16 22:15:28.750933T- Round 2
 2022-05-16 22:15:28.750933T- 
@@ -24,7 +23,6 @@ OppHPLost: 107
 HPGap: -283
 RoundLength: 53333
 RoundWon: False
-AvgFramesForAction: 0.8009478672985783
         
 2022-05-16 22:15:28.750933T- Round 3
 2022-05-16 22:15:28.750933T- 
@@ -33,7 +31,6 @@ OppHPLost: 109
 HPGap: -283
 RoundLength: 39583
 RoundWon: False
-AvgFramesForAction: -2.5700934579439254
         
 2022-05-16 22:18:32.142503T- Config Used: 
 C: 1.4 
@@ -52,7 +49,6 @@ OppHPLost: 153
 HPGap: -240
 RoundLength: 59733
 RoundWon: False
-AvgFramesForAction: 7.359342915811088
         
 2022-05-16 22:18:32.142503T- Round 2
 2022-05-16 22:18:32.142503T- 
@@ -61,7 +57,6 @@ OppHPLost: 122
 HPGap: -270
 RoundLength: 51116
 RoundWon: False
-AvgFramesForAction: -1.2609756097560976
         
 2022-05-16 22:18:32.142503T- Round 3
 2022-05-16 22:18:32.142503T- 
@@ -70,7 +65,6 @@ OppHPLost: 143
 HPGap: -203
 RoundLength: 59716
 RoundWon: False
-AvgFramesForAction: 1.075
         
 2022-05-16 22:21:44.318277T- Config Used: 
 C: 3 
@@ -89,7 +83,6 @@ OppHPLost: 168
 HPGap: -214
 RoundLength: 59733
 RoundWon: False
-AvgFramesForAction: 7.563291139240507
         
 2022-05-16 22:21:44.318277T- Round 2
 2022-05-16 22:21:44.318277T- 
@@ -98,7 +91,6 @@ OppHPLost: 130
 HPGap: -203
 RoundLength: 59683
 RoundWon: False
-AvgFramesForAction: -0.008146639511201629
         
 2022-05-16 22:21:44.318277T- Round 3
 2022-05-16 22:21:44.318277T- 
@@ -107,7 +99,6 @@ OppHPLost: 185
 HPGap: -181
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 0.010101010101010102
         
 2022-05-16 22:24:55.269394T- Config Used: 
 C: 1.4 
@@ -126,7 +117,6 @@ OppHPLost: 98
 HPGap: -248
 RoundLength: 59650
 RoundWon: False
-AvgFramesForAction: 9.914127423822714
         
 2022-05-16 22:24:55.269394T- Round 2
 2022-05-16 22:24:55.269394T- 
@@ -135,7 +125,6 @@ OppHPLost: 146
 HPGap: -190
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 0.01634877384196185
         
 2022-05-16 22:24:55.269394T- Round 3
 2022-05-16 22:24:55.269394T- 
@@ -144,7 +133,6 @@ OppHPLost: 164
 HPGap: -194
 RoundLength: 59683
 RoundWon: False
-AvgFramesForAction: -0.01098901098901099
         
 2022-05-16 22:28:00.820789T- Config Used: 
 C: 1.4 
@@ -163,7 +151,6 @@ OppHPLost: 145
 HPGap: -179
 RoundLength: 59700
 RoundWon: False
-AvgFramesForAction: 4.738095238095238
         
 2022-05-16 22:28:00.820789T- Round 2
 2022-05-16 22:28:00.820789T- 
@@ -172,7 +159,6 @@ OppHPLost: 213
 HPGap: -111
 RoundLength: 59716
 RoundWon: False
-AvgFramesForAction: 0.001326259946949602
         
 2022-05-16 22:28:00.820789T- Round 3
 2022-05-16 22:28:00.820789T- 
@@ -181,7 +167,6 @@ OppHPLost: 61
 HPGap: -335
 RoundLength: 55333
 RoundWon: False
-AvgFramesForAction: -0.3741109530583215
         
 2022-05-16 22:31:11.811728T- Config Used: 
 C: 1.4 
@@ -200,7 +185,6 @@ OppHPLost: 209
 HPGap: -179
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 4.752988047808765
         
 2022-05-16 22:31:11.811728T- Round 2
 2022-05-16 22:31:11.811728T- 
@@ -209,7 +193,6 @@ OppHPLost: 120
 HPGap: -254
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 0.007874015748031496
         
 2022-05-16 22:31:11.811728T- Round 3
 2022-05-16 22:31:11.811728T- 
@@ -218,7 +201,6 @@ OppHPLost: 140
 HPGap: -212
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 0.0
         
 2022-05-16 22:34:06.679714T- Config Used: 
 C: 1.4 
@@ -237,7 +219,6 @@ OppHPLost: 115
 HPGap: -283
 RoundLength: 49516
 RoundWon: False
-AvgFramesForAction: 11.515503875968992
         
 2022-05-16 22:34:06.679714T- Round 2
 2022-05-16 22:34:06.679714T- 
@@ -246,7 +227,6 @@ OppHPLost: 128
 HPGap: -262
 RoundLength: 57450
 RoundWon: False
-AvgFramesForAction: 1.5346534653465347
         
 2022-05-16 22:34:06.679714T- Round 3
 2022-05-16 22:34:06.679714T- 
@@ -255,7 +235,6 @@ OppHPLost: 92
 HPGap: -298
 RoundLength: 55900
 RoundWon: False
-AvgFramesForAction: -0.2827586206896552
         
 2022-05-16 22:37:05.527143T- Config Used: 
 C: 1.4 
@@ -274,7 +253,6 @@ OppHPLost: 205
 HPGap: -137
 RoundLength: 59716
 RoundWon: False
-AvgFramesForAction: 7.926991150442478
         
 2022-05-16 22:37:05.527143T- Round 2
 2022-05-16 22:37:05.527143T- 
@@ -283,7 +261,6 @@ OppHPLost: 34
 HPGap: -364
 RoundLength: 46133
 RoundWon: False
-AvgFramesForAction: -2.3487031700288186
         
 2022-05-16 22:37:05.527143T- Round 3
 2022-05-16 22:37:05.527143T- 
@@ -292,5 +269,4 @@ OppHPLost: 54
 HPGap: -342
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 1.711297071129707
         

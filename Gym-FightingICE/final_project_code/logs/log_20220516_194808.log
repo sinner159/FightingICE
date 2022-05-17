@@ -26,7 +26,6 @@ OppHPLost: 0
 HPGap: -10
 RoundLength: 2766
 RoundWon: False
-AvgFramesForAction: 13.833333333333334
         
 2022-05-16 19:48:30.376642T- Simulating for 3f84f612-0b85-4236-b0d3-5ffc672226d7
 2022-05-16 19:48:43.193868T- Config Used: 
@@ -46,7 +45,6 @@ OppHPLost: 10
 HPGap: -2
 RoundLength: 4833
 RoundWon: False
-AvgFramesForAction: 12.608695652173912
         
 2022-05-16 19:48:43.193868T- Simulating for de5cddfa-0399-422d-91fc-ac345a782564
 2022-05-16 19:48:57.971913T- Config Used: 
@@ -66,7 +64,6 @@ OppHPLost: 5
 HPGap: -5
 RoundLength: 6916
 RoundWon: False
-AvgFramesForAction: 10.921052631578947
         
 2022-05-16 19:48:57.971913T- Simulating for 942bc031-a4eb-47c4-8655-a4edeaef1eb2
 2022-05-16 19:49:11.270850T- Config Used: 
@@ -86,7 +83,6 @@ OppHPLost: 10
 HPGap: -8
 RoundLength: 5533
 RoundWon: False
-AvgFramesForAction: 11.068965517241379
         
 2022-05-16 19:49:11.270850T- Round 2
 2022-05-16 19:49:11.270850T- 
@@ -95,7 +91,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 12.0
         
 2022-05-16 19:49:11.270850T- Simulating for e0b2dbf9-ff2b-4942-a881-a34005cf176f
 2022-05-16 19:49:22.614462T- Config Used: 
@@ -115,7 +110,6 @@ OppHPLost: 8
 HPGap: -4
 RoundLength: 3466
 RoundWon: False
-AvgFramesForAction: 10.947368421052632
         
 2022-05-16 19:49:22.614462T- Simulating for 139497c2-f04d-4d55-b4af-8a4f878f0d62
 2022-05-16 19:49:32.699939T- Config Used: 
@@ -135,7 +129,6 @@ OppHPLost: 10
 HPGap: -2
 RoundLength: 2600
 RoundWon: False
-AvgFramesForAction: 12.166666666666666
         
 2022-05-16 19:49:32.699939T- Round 2
 2022-05-16 19:49:32.699939T- 
@@ -144,7 +137,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 19:49:32.699939T- Selection begin
 2022-05-16 19:49:32.699939T- Ranking
@@ -183,7 +175,6 @@ OppHPLost: 0
 HPGap: -10
 RoundLength: 2633
 RoundWon: False
-AvgFramesForAction: 11.285714285714286
         
 2022-05-16 19:49:43.664741T- Simulating for 36229d46-9bbb-467e-b904-4c3ed29fa511
 2022-05-16 19:49:53.349178T- Config Used: 
@@ -203,7 +194,6 @@ OppHPLost: 0
 HPGap: -10
 RoundLength: 1833
 RoundWon: False
-AvgFramesForAction: 11.0
         
 2022-05-16 19:49:53.349178T- Simulating for 772bb1cd-087a-4acf-b389-f29877d3287f
 2022-05-16 19:50:03.100524T- Config Used: 
@@ -223,7 +213,6 @@ OppHPLost: 0
 HPGap: -10
 RoundLength: 1850
 RoundWon: False
-AvgFramesForAction: 11.1
         
 2022-05-16 19:50:03.100524T- Simulating for 8f913961-32ae-4665-8784-b7769389148c
 2022-05-16 19:50:14.516292T- Config Used: 
@@ -243,7 +232,6 @@ OppHPLost: 12
 HPGap: 12
 RoundLength: 3483
 RoundWon: False
-AvgFramesForAction: 12.4375
         
 2022-05-16 19:50:14.516292T- Round 2
 2022-05-16 19:50:14.516292T- 
@@ -252,7 +240,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 10.0
         
 2022-05-16 19:50:14.516292T- Simulating for 25e227e4-61d7-46f3-9968-85289b7ff693
 2022-05-16 19:50:24.618119T- Config Used: 
@@ -272,7 +259,6 @@ OppHPLost: 5
 HPGap: -7
 RoundLength: 2150
 RoundWon: False
-AvgFramesForAction: 11.727272727272727
         
 2022-05-16 19:50:24.618119T- Simulating for ff24c3cc-c43e-4e2d-a7ea-a1bdeaebb4ee
 2022-05-16 19:50:34.379146T- Config Used: 
@@ -292,7 +278,6 @@ OppHPLost: 0
 HPGap: -10
 RoundLength: 1850
 RoundWon: False
-AvgFramesForAction: 11.1
         
 2022-05-16 19:50:34.379146T- Selection begin
 2022-05-16 19:50:34.379146T- Ranking
@@ -331,7 +316,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 10.538461538461538
         
 2022-05-16 19:50:44.749620T- Round 2
 2022-05-16 19:50:44.749620T- 
@@ -340,7 +324,6 @@ OppHPLost: 0
 HPGap: -10
 RoundLength: 2466
 RoundWon: False
-AvgFramesForAction: 11.0
         
 2022-05-16 19:50:44.749620T- Simulating for e585751a-4478-464d-aa4c-80d2d5716e93
 2022-05-16 19:50:55.358719T- Config Used: 
@@ -360,7 +343,6 @@ OppHPLost: 0
 HPGap: -12
 RoundLength: 2533
 RoundWon: False
-AvgFramesForAction: 11.692307692307692
         
 2022-05-16 19:50:55.358719T- Simulating for d331b19b-816b-4b31-89f4-50aded3d81c8
 2022-05-16 19:51:07.786046T- Config Used: 
@@ -380,7 +362,6 @@ OppHPLost: 0
 HPGap: -12
 RoundLength: 4466
 RoundWon: False
-AvgFramesForAction: 11.304347826086957
         
 2022-05-16 19:51:07.786046T- Round 2
 2022-05-16 19:51:07.786046T- 
@@ -389,7 +370,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 9.0
         
 2022-05-16 19:51:07.786046T- Simulating for 5f706628-96b4-4f40-bd75-3d076ec93963
 2022-05-16 19:51:18.531404T- Config Used: 
@@ -409,7 +389,6 @@ OppHPLost: 5
 HPGap: -13
 RoundLength: 2733
 RoundWon: False
-AvgFramesForAction: 11.714285714285714
         
 2022-05-16 19:51:18.531404T- Round 2
 2022-05-16 19:51:18.531404T- 
@@ -418,7 +397,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 19:51:18.531404T- Simulating for 13c93b68-9d3e-48e4-a1f0-a56420254e86
 2022-05-16 19:51:31.916063T- Config Used: 
@@ -438,7 +416,6 @@ OppHPLost: 0
 HPGap: -12
 RoundLength: 5250
 RoundWon: False
-AvgFramesForAction: 12.6
         
 2022-05-16 19:51:31.916063T- Round 2
 2022-05-16 19:51:31.916063T- 
@@ -447,7 +424,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 0
         
 2022-05-16 19:51:31.916063T- Simulating for 4fbc552a-5b92-4de8-bf46-26ea9f5712dd
 2022-05-16 19:51:44.832006T- Config Used: 
@@ -467,7 +443,6 @@ OppHPLost: 12
 HPGap: 0
 RoundLength: 5050
 RoundWon: False
-AvgFramesForAction: 10.851851851851851
         
 2022-05-16 19:51:44.832006T- Round 2
 2022-05-16 19:51:44.832006T- 
@@ -476,7 +451,6 @@ OppHPLost: 20
 HPGap: 0
 RoundLength: 0
 RoundWon: False
-AvgFramesForAction: 10.0
         
 2022-05-16 19:51:44.832006T- Selection begin
 2022-05-16 19:51:44.832006T- Ranking

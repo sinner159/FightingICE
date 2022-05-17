@@ -15,7 +15,6 @@ OppHPLost: 264
 HPGap: -44
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 14.268924302788845
         
 2022-05-16 23:52:29.497350T- Round 2
 2022-05-16 23:52:29.497350T- 
@@ -24,7 +23,6 @@ OppHPLost: 331
 HPGap: 111
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 7.073122529644269
         
 2022-05-16 23:52:29.497350T- Round 3
 2022-05-16 23:52:29.497350T- 
@@ -33,7 +31,6 @@ OppHPLost: 277
 HPGap: -72
 RoundLength: 59683
 RoundWon: False
-AvgFramesForAction: 7.125748502994012
         
 2022-05-16 23:52:29.497350T- Average:
 
@@ -43,5 +40,4 @@ OppHPLost: 318.0
 HPGap: -1.25
 RoundLength: 44795.75
 RoundWon: 0.0
-AvgFramesForAction: 0
         

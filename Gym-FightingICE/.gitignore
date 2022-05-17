@@ -6,3 +6,5 @@ gym_fightingice.egg-info
 lib
 log
 test_floder
+final_project_code/logs/*
+

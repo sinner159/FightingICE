@@ -15,7 +15,6 @@ OppHPLost: 95
 HPGap: -298
 RoundLength: 50400
 RoundWon: False
-AvgFramesForAction: 15.255050505050505
         
 2022-05-16 23:12:13.603514T- Round 2
 2022-05-16 23:12:13.603514T- 
@@ -24,7 +23,6 @@ OppHPLost: 73
 HPGap: -325
 RoundLength: 45183
 RoundWon: False
-AvgFramesForAction: 6.825714285714286
         
 2022-05-16 23:12:13.603514T- Round 3
 2022-05-16 23:12:13.605344T- 
@@ -33,7 +31,6 @@ OppHPLost: 71
 HPGap: -323
 RoundLength: 42966
 RoundWon: False
-AvgFramesForAction: 7.161764705882353
         
 2022-05-16 23:12:13.605344T- Average:
 
@@ -43,7 +40,6 @@ OppHPLost: 159.75
 HPGap: -236.5
 RoundLength: 34637.25
 RoundWon: 0.0
-AvgFramesForAction: 0
         
 2022-05-16 23:15:19.499078T- Config Used: 
 C: 3 
@@ -62,7 +58,6 @@ OppHPLost: 121
 HPGap: -221
 RoundLength: 59650
 RoundWon: False
-AvgFramesForAction: 15.178343949044587
         
 2022-05-16 23:15:19.499078T- Round 2
 2022-05-16 23:15:19.499078T- 
@@ -71,7 +66,6 @@ OppHPLost: 222
 HPGap: -94
 RoundLength: 59733
 RoundWon: False
-AvgFramesForAction: 7.668094218415417
         
 2022-05-16 23:15:19.499078T- Round 3
 2022-05-16 23:15:19.499078T- 
@@ -80,7 +74,6 @@ OppHPLost: 76
 HPGap: -312
 RoundLength: 53283
 RoundWon: False
-AvgFramesForAction: 6.671428571428572
         
 2022-05-16 23:15:19.499078T- Average:
 
@@ -90,7 +83,6 @@ OppHPLost: 204.75
 HPGap: -156.75
 RoundLength: 43166.5
 RoundWon: 0.0
-AvgFramesForAction: 0
         
 2022-05-16 23:18:33.127205T- Config Used: 
 C: 4 
@@ -109,7 +101,6 @@ OppHPLost: 221
 HPGap: -121
 RoundLength: 59683
 RoundWon: False
-AvgFramesForAction: 14.846473029045644
         
 2022-05-16 23:18:33.127205T- Round 2
 2022-05-16 23:18:33.127205T- 
@@ -118,7 +109,6 @@ OppHPLost: 136
 HPGap: -168
 RoundLength: 59683
 RoundWon: False
-AvgFramesForAction: 7.205645161290323
         
 2022-05-16 23:18:33.127205T- Round 3
 2022-05-16 23:18:33.127205T- 
@@ -127,7 +117,6 @@ OppHPLost: 140
 HPGap: -190
 RoundLength: 59750
 RoundWon: False
-AvgFramesForAction: 7.400826446280992
         
 2022-05-16 23:18:33.127205T- Average:
 
@@ -137,5 +126,4 @@ OppHPLost: 224.25
 HPGap: -119.75
 RoundLength: 44779.0
 RoundWon: 0.0
-AvgFramesForAction: 0
         
