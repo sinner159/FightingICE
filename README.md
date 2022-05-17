@@ -15,10 +15,6 @@ All or most of the data that we used for our results can be found in the logs fo
 Generation.txt found in the generation folder, was used to load previous population data for GA when the experiments crashed in the middle of it. This way we could continue the evolution
 
 
-MCTS Related:
-MCTS_node.py
-
-
 To run our project:
 
 Open this dir in powershell or cmd
