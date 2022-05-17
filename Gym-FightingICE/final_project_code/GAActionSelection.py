@@ -82,7 +82,12 @@ class GAActionSelection():
             
 
     def fitness(self, chrm: Chromosome):
-        return chrm.performanceMetrics.roundData[0].hpGap
+        total = 0
+        for round in chrm.performanceMetrics.roundData:
+            total += round.hpGap
+
+
+        return total / chrm.performanceMetrics.round
 
 
     def populationAsString(self):
