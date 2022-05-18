@@ -8,7 +8,7 @@ import os
 
 
 port = 4242
-cmd = f"start java -cp FightingICE.jar;./lib/lwjgl/*;./lib/natives/windows/*;./lib/*;  Main --limithp {400} {400} --grey-bg --py4j --mute --fr 60 --json -r {3} --port {port}"
+cmd = f"start java -cp FightingICE.jar;./lib/lwjgl/*;./lib/natives/windows/*;./lib/*;  Main --limithp {400} {400} --grey-bg --py4j --mute --fr 60 --json -r {1} --port {port}"
 p = subprocess.Popen(cmd, shell=True)
 logger = Logger(f"{os.getcwd()}/final_project_code/logs/")
 
